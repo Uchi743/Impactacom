@@ -77,7 +77,7 @@ Le bouton retour du navigateur fonctionne via `popstate`.
 - **Taux de satisfaction** : **92%**
 - **Adresse** : 108 rue Michel-Ange — 75016 Paris
 - **Téléphone** : 06 13 54 70 05
-- **Email** : ⚠️ Actuellement placeholder `contact@impactacom.fr` — **à confirmer avec Léo/Corinne**
+- **Email** : `cobarois@gmail.com`
 - **Mentions légales Qualiopi** : bloc complet en pied de page conforme (certification, formation professionnelle)
 - **Crédits** : Photographe (email à confirmer) + Webdesign original : Al Di Girolamo (https://aldigirolamo.fr)
 
@@ -102,7 +102,7 @@ Pour déployer : push sur la branche connectée à Netlify, ça se déploie auto
 
 ## À faire / TODO
 
-- [ ] Confirmer l'email de contact réel (actuellement placeholder `contact@impactacom.fr` après retrait de l'obfuscation Cloudflare)
+- [x] Email de contact confirmé : `cobarois@gmail.com`
 - [ ] Confirmer l'email du photographe crédité dans les mentions légales
 - [ ] Décider si le formulaire de contact doit avoir un vrai backend (Netlify Forms = 1 ligne à ajouter, gratuit jusqu'à 100 submissions/mois)
 - [ ] Ajouter les assets images dans `/assets/` si besoin (actuellement tout est en SVG inline ou via YouTube)
