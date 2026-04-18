@@ -55,7 +55,9 @@ window.addEventListener('scroll', function() {
   if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(45,31,78,0.08)' : 'none';
 });
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialiser l'état de la page d'accueil dans l'historique
   try { history.replaceState({ page: 'home' }, '', '/'); } catch(e) {}
+  document.querySelectorAll('a[data-u][data-d]').forEach(function(a) {
+    a.href = 'mailto:' + a.dataset.u + '\x40' + a.dataset.d;
+  });
   initReveal();
 });

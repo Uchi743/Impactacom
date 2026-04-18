@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /.claude/
+Disallow: /.git/
+Disallow: /node_modules/
+
+Sitemap: https://impactacom.fr/sitemap.xml
