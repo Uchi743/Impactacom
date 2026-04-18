@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Corinne Barois — coach en prise de parole en public à Paris. 25 ans d'expérience, 92% de satisfaction. Formations individuelles, collectives et en ligne.">
+<title>Impactacom — Corinne Barois | Coach Prise de Parole en Public</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/main.js" defer></script>
+
+
+<!-- ══════ NAV ══════ -->
+<nav id="topnav">
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="logo-emblem">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="11" r="3.5" fill="white" opacity=".9"/>
+        <circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".5"/>
+        <path d="M11 1v2.5M11 18.5V21M1 11h2.5M18.5 11H21" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-main">Impactacom</div>
+      <div class="logo-sub">Corinne Barois</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a id="nav-programmes" style="cursor:pointer;">Programmes</a>
+      <div class="dropdown-menu">
+        <div class="dropdown-item" onclick="showPage('formation-training')">
+          <div class="dropdown-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <div class="dropdown-item-text"><div class="dropdown-item-label">Training en ligne</div><div class="dropdown-item-sub">10h · Classe virtuelle · 1 600 €</div></div>
+        </div>
+        <div class="dropdown-item" onclick="showPage('formation-individuel')">
+          <div class="dropdown-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="dropdown-item-text"><div class="dropdown-item-label">Accompagnement individuel</div><div class="dropdown-item-sub">14h · Présentiel & distanciel · 3 800 €</div></div>
+        </div>
+        <div class="dropdown-item" onclick="showPage('formation-collective')">
+          <div class="dropdown-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="dropdown-item-text"><div class="dropdown-item-label">Formation collective</div><div class="dropdown-item-sub">14h · 2 jours · Présentiel · 4 100 €</div></div>
+        </div>
+        <div class="dropdown-item" onclick="showPage('formation-custom')">
+          <div class="dropdown-item-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
+          <div class="dropdown-item-text"><div class="dropdown-item-label">Programme sur mesure</div><div class="dropdown-item-sub">Format libre · Sur devis</div></div>
+        </div>
+        <div class="dropdown-sep"></div>
+        <div class="dropdown-all" onclick="showPage('programmes')">Voir tous les programmes <span>→</span></div>
+      </div>
+    </li>
+    <li><a onclick="showPage('apropos')" id="nav-apropos">À propos</a></li>
+    <li><a onclick="showPage('temoignages')" id="nav-temoignages">Témoignages</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="nav-cta">Séance gratuite</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 7h16M3 12h16M3 17h16" stroke="#2D1F4E" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div>
+    <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Programmes</div>
+    <div class="mobile-sub">
+      <a onclick="showPage('formation-training');toggleMenu()">Training en ligne</a>
+      <a onclick="showPage('formation-individuel');toggleMenu()">Accompagnement individuel</a>
+      <a onclick="showPage('formation-collective');toggleMenu()">Formation collective</a>
+      <a onclick="showPage('formation-custom');toggleMenu()">Programme sur mesure</a>
+      <a onclick="showPage('programmes');toggleMenu()" style="color:var(--violet-soft);font-weight:600;">Voir tous →</a>
+    </div>
+  </div>
+  <a onclick="showPage('apropos');toggleMenu()">À propos</a>
+  <a onclick="showPage('temoignages');toggleMenu()">Témoignages</a>
+  <a onclick="showPage('contact');toggleMenu()">Contact</a>
+  <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="mobile-menu-cta">Séance gratuite</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE HOME                                            -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag" data-r><span></span>Coach · Formatrice · Paris 16e</div>
+      <h1 class="hero-title" data-r>Maîtrisez<br>l'art de la<br>prise de parole<br><em>en public</em></h1>
+      <p class="hero-desc" data-r>Dirigeants, managers et conférenciers — développez un leadership oral authentique et convainquez vos audiences avec assurance.</p>
+      <div class="hero-ctas" data-r>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-main">Réserver ma séance gratuite <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a onclick="showPage('programmes')" class="btn-outline">Voir les programmes</a>
+      </div>
+      <div class="hero-stats" data-r>
+        <div class="hstat"><span class="hstat-n">23</span><span class="hstat-l">ans d'expérience</span></div>
+        <div class="hstat"><span class="hstat-n">100%</span><span class="hstat-l">satisfaction 2025</span></div>
+        <div class="hstat"><span class="hstat-n">500+</span><span class="hstat-l">professionnels formés</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://impactacom.fr/wp-content/uploads/2025/12/Corinne-Barois-1-portrait-classique-souriant.jpeg" alt="Corinne Barois" class="hero-photo"/>
+      <div class="hero-caption">
+        <div class="hcap-name">Corinne Barois</div>
+        <div class="hcap-sub">Master II Coaching · ENSATT · Certifiée Qualiopi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIF BAND -->
+  <div class="certif-band">
+    <div class="certif-item"><div class="certif-dot"></div><span class="certif-text">Certification Qualiopi</span></div>
+    <div class="certif-sep"></div>
+    <div class="certif-item"><div class="certif-dot"></div><span class="certif-text">N° 117 54 47 85 75</span></div>
+    <div class="certif-sep"></div>
+    <div class="certif-item"><div class="certif-dot"></div><span class="certif-text">Formapro by Accertif</span></div>
+    <div class="certif-sep"></div>
+    <div class="certif-item"><div class="certif-dot"></div><span class="certif-text">Organisme de formation professionnelle</span></div>
+    <div class="certif-sep"></div>
+    <div class="certif-item"><div class="certif-dot"></div><span class="certif-text">Accessibilité handicap</span></div>
+  </div>
+
+  <!-- PROBLEMS -->
+  <section class="sec" style="background:var(--off-white);">
+
+    <div class="sec-eye" data-r>Vos défis actuels</div>
+    <h2 class="sec-title" data-r>Vous vous<br><em>reconnaissez ?</em></h2>
+    <p style="font-size:17px;font-weight:300;color:var(--muted);line-height:1.7;max-width:560px;margin-top:16px;margin-bottom:48px;" data-r>Ces situations freinent votre impact au quotidien. Elles ont une solution — une méthode qui s'adapte à votre personnalité, pas l'inverse.</p>
+
+    <!-- grille alignée : align-items:stretch pour égaliser la hauteur -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;" data-r>
+
+      <!-- GAUCHE : problèmes -->
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Ce que vous vivez</div>
+        <!-- border-radius 8px, même hauteur grâce à flex:1 -->
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;flex:1;display:flex;flex-direction:column;">
+          <div class="prob-row"><span class="prob-num">01</span><p class="prob-text">Vous préparez vos allocutions <strong>sans véritable méthode</strong> et le résultat ne reflète pas votre expertise.</p></div>
+          <div class="prob-row"><span class="prob-num">02</span><p class="prob-text">Vous avez du mal à <strong>déterminer vos objectifs</strong> et à engager votre public.</p></div>
+          <div class="prob-row"><span class="prob-num">03</span><p class="prob-text">Vous vous sentez <strong>vulnérable face aux conflits</strong> et aux émotions en public.</p></div>
+          <div class="prob-row"><span class="prob-num">04</span><p class="prob-text">Vous privilégiez <strong>l'opérationnel au détriment du relationnel</strong>.</p></div>
+          <div class="prob-row"><span class="prob-num">05</span><p class="prob-text">Vous manquez de <strong>confiance en vous</strong> lors de vos prises de parole à fort enjeu.</p></div>
+          <div class="prob-row" style="border-bottom:none;flex:1;"><span class="prob-num">06</span><p class="prob-text">Vous avez du mal à <strong>captiver et maintenir l'attention</strong> de votre audience sur la durée.</p></div>
+        </div>
+      </div>
+
+      <!-- DROITE : solutions -->
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.01);margin-bottom:12px;user-select:none;" aria-hidden="true">•</div>
+        <!-- flex:1 + justify-content:space-between pour remplir la hauteur -->
+        <div style="background:var(--violet);border-radius:8px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:0;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px;">Mes solutions</div>
+            <div style="display:flex;flex-direction:column;gap:0;">
+
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;">
+                <div style="width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </div>
+                <div><div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">Analyse de vos besoins</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;">Identifier vos lacunes pour améliorer vos compétences oratoires de manière ciblée.</div></div>
+              </div>
+
+              <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:20px;"></div>
+
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;">
+                <div style="width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                </div>
+                <div><div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">Outils d'autonomie</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;">Développer votre autonomie dans la préparation et la mise en mots de vos idées.</div></div>
+              </div>
+
+              <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:20px;"></div>
+
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;">
+                <div style="width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div><div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">Contrôle de l'impact</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;">Apprenez à marquer les esprits et à voir vos paroles suivies d'effets concrets et mesurables.</div></div>
+              </div>
+
+              <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:20px;"></div>
+
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <div style="width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div><div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">Gestion des crises</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;">Améliorer vos compétences relationnelles et émotionnelles pour gérer les situations difficiles.</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA collé en bas -->
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);">
+            <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank"
+               style="display:flex;align-items:center;justify-content:center;gap:8px;background:white;color:var(--violet);padding:14px 22px;border-radius:4px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:.04em;width:100%;transition:all .2s;">
+              Réserver ma séance gratuite
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- OFFERS -->
+  <section class="sec" id="offres">
+    <div class="sec-eye" data-r>Programmes</div>
+    <h2 class="sec-title" data-r>Choisissez votre<br><em>niveau d'engagement</em></h2>
+    <div class="offers-grid">
+      <div class="offer-card" data-r>
+        <div class="offer-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="offer-format">10h · 6 rendez-vous · En ligne</div>
+        <h3 class="offer-name">Training en ligne</h3>
+        <p class="offer-desc">Un parcours structuré en classe virtuelle pour développer votre aisance oratoire à votre rythme.</p>
+        <ul class="offer-list"><li>Techniques oratoires & posture</li><li>Efficacité émotionnelle et relationnelle</li><li>Techniques rédactionnelles</li><li>Journal de Bord personnalisé</li></ul>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;">
+          <a onclick="showPage('formation-training')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--violet);color:white;padding:14px 20px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s;border:none;cursor:pointer;width:100%;">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--violet);padding:13px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s;width:100%;border:1.5px solid var(--border);">Séance gratuite</a>
+        </div>
+      </div>
+      <div class="offer-card featured" data-r>
+        <div class="offer-badge">Le plus choisi</div>
+        <div class="offer-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="offer-format">14h · 8 rendez-vous · Présentiel & distanciel</div>
+        <h3 class="offer-name">Accompagnement individuel</h3>
+        <p class="offer-desc">Un coaching sur-mesure pour transformer votre leadership oral en profondeur et durablement.</p>
+        <ul class="offer-list"><li>Diagnostic complet de départ</li><li>Coaching professionnel inclus</li><li>Préparation d'interventions réelles</li><li>Suivi rédactionnel personnalisé</li></ul>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;">
+          <a onclick="showPage('formation-individuel')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:white;color:#2D1F4E;padding:14px 20px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s;width:100%;">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);padding:13px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s;width:100%;border:1.5px solid rgba(255,255,255,.2);">Séance gratuite</a>
+        </div>
+      </div>
+      <div class="offer-card" data-r>
+        <div class="offer-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="offer-format">14h · 2 jours · Présentiel intra-entreprise</div>
+        <h3 class="offer-name">Formation collective</h3>
+        <p class="offer-desc">Un séminaire immersif pour transformer la prise de parole de toute votre équipe.</p>
+        <ul class="offer-list"><li>Techniques théâtrales d'impact</li><li>Jeux de rôle & mises en situation</li><li>Gestion des émotions & objections</li><li>Certification possible</li></ul>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;">
+          <a onclick="showPage('formation-collective')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--violet);color:white;padding:14px 20px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s;border:none;cursor:pointer;width:100%;">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a onclick="showPage('contact')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--violet);padding:13px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s;width:100%;border:1.5px solid var(--border);">Demander un devis</a>
+        </div>
+      </div>
+      <div class="offer-card" data-r style="border:2px dashed var(--border);background:var(--off-white);">
+        <div class="offer-icon" style="background:var(--border);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7A6F8F" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <div class="offer-format" style="color:var(--muted);">Nouveau programme · À venir</div>
+        <h3 class="offer-name" style="color:var(--muted);">Programme sur mesure</h3>
+        <p class="offer-desc">Un programme personnalisé adapté à vos besoins spécifiques et à votre contexte professionnel. Contactez-nous pour en savoir plus.</p>
+        <ul class="offer-list"><li>Format à définir ensemble</li><li>Contenu entièrement personnalisé</li><li>Présentiel, distanciel ou hybride</li><li>Devis sur demande</li></ul>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto;">
+          <a onclick="showPage('formation-custom')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--muted);color:white;padding:14px 20px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;width:100%;">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a onclick="showPage('contact')" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--violet);padding:13px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s;width:100%;border:1.5px solid var(--border);">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videos sec">
+    <div class="videos-header">
+      <div>
+        <div class="sec-eye" data-r>Ressources vidéo</div>
+        <h2 class="sec-title" data-r>Conseils & <em>exercices pratiques</em></h2>
+      </div>
+      <a href="https://www.youtube.com/channel/UC3w6mKyOL3SG6uP6Q-lcl8g/" target="_blank" class="view-all">Voir toutes les vidéos →</a>
+    </div>
+    <div class="videos-grid">
+      <div class="vcard" data-r>
+        <div class="vcard-thumb" id="vt1">
+          <img src="https://img.youtube.com/vi/9Sw_Vtjvw4Y/hqdefault.jpg" alt="Posture"/>
+          <button class="vcard-play" onclick="playVideo('vt1','9Sw_Vtjvw4Y')"><svg width="20" height="20" viewBox="0 0 20 20" fill="#2D1F4E"><path d="M6 4l12 6-12 6V4z"/></svg></button>
+        </div>
+        <div class="vcard-info"><div class="vcard-date">Janvier 2026</div><h3 class="vcard-title">Adopter la bonne posture en prise de parole en public</h3></div>
+      </div>
+      <div class="vcard" data-r>
+        <div class="vcard-thumb" id="vt2">
+          <img src="https://img.youtube.com/vi/OqzSWsvRM6s/hqdefault.jpg" alt="Articulation"/>
+          <button class="vcard-play" onclick="playVideo('vt2','OqzSWsvRM6s')"><svg width="20" height="20" viewBox="0 0 20 20" fill="#2D1F4E"><path d="M6 4l12 6-12 6V4z"/></svg></button>
+        </div>
+        <div class="vcard-info"><div class="vcard-date">Janvier 2026</div><h3 class="vcard-title">Comment échauffer son articulation en prise de parole</h3></div>
+      </div>
+      <div class="vcard" data-r>
+        <div class="vcard-thumb" id="vt3">
+          <img src="https://img.youtube.com/vi/1uHjWikmYds/hqdefault.jpg" alt="Respiration"/>
+          <button class="vcard-play" onclick="playVideo('vt3','1uHjWikmYds')"><svg width="20" height="20" viewBox="0 0 20 20" fill="#2D1F4E"><path d="M6 4l12 6-12 6V4z"/></svg></button>
+        </div>
+        <div class="vcard-info"><div class="vcard-date">Janvier 2026</div><h3 class="vcard-title">Comment respirer convenablement en prise de parole</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-img"><img src="https://impactacom.fr/wp-content/uploads/2025/12/Corinne-Barois-1-portrait-taille-rouge-1-731x1024.jpg" alt="Corinne Barois"/></div>
+    <div class="about-content">
+      <div class="sec-eye" data-r>La méthode</div>
+      <h2 class="sec-title" data-r>Libérez votre potentiel oratoire avec une <em>experte en communication théâtrale</em></h2>
+      <p class="about-quote" data-r>"Communiquer avec impact, c'est savoir évaluer en temps réel l'effet que produisent vos messages sur votre auditoire."</p>
+      <p class="about-p" data-r>Avec mes 23 années d'expérience en communication théâtrale et un Master en coaching (Diplômée d'État), j'ai aidé des professionnels de tous secteurs — automobile, textile, média, bancaire, assurance — à transformer leur communication orale pour des résultats concrets.</p>
+      <p class="about-p" data-r>Ma méthode combine les techniques théâtrales et le développement personnel pour vous offrir une formation oratoire complète, tout en consolidant vos compétences émotionnelles et relationnelles.</p>
+      <div class="about-tl" data-r>
+        <div class="tl-item"><span class="tl-year">2001</span><span class="tl-text">Création des ateliers "développement personnel par le théâtre" en entreprise</span></div>
+        <div class="tl-item"><span class="tl-year">2009</span><span class="tl-text">Master II Coaching & développement personnel — Université Panthéon-Assas</span></div>
+        <div class="tl-item"><span class="tl-year">2013</span><span class="tl-text">Intégration dans les programmes Soft Skills — GEM, Dauphine, IESEG…</span></div>
+        <div class="tl-item"><span class="tl-year">2023</span><span class="tl-text">Certification Qualiopi "Prendre la parole en public" délivrée</span></div>
+      </div>
+      <!-- PDF DOWNLOAD -->
+      <div data-r style="margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;">Présentation complète</div>
+        <a href="https://impactacom.fr/wp-content/uploads/2023/05/2026-01-Presentation-IMPACTACOM-.pdf" target="_blank"
+           style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:14px 20px;text-decoration:none;transition:all .2s;width:100%;"
+           onmouseover="this.style.background='rgba(255,255,255,.14)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">
+          <div style="width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:14px;font-weight:600;color:white;">Télécharger la présentation PDF</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;">Présentation IMPACTACOM 2026 · PDF</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.5" stroke-linecap="round"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M20 20H4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec">
+    <div class="testi-top">
+      <div><div class="sec-eye" data-r>Témoignages</div><h2 class="sec-title" data-r>Ce qu'ils disent<br><em>de la formation</em></h2></div>
+      <div class="rating-block" data-r><div class="rating-big">Excellent</div><div class="rating-stars">★★★★★</div><div class="rating-src">11 avis vérifiés · Google</div></div>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard" data-r><span class="tcard-mark">"</span><p class="tcard-text">Grâce à sa bienveillance, j'ai progressé considérablement. Je me sens beaucoup plus à l'aise pour parler en public.</p><div class="tcard-author"><div class="avatar">FC</div><div><div class="auth-name">Federica Cacco</div><div class="auth-role">Manager · Formation individuelle</div></div></div></div>
+      <div class="tcard" data-r><span class="tcard-mark">"</span><p class="tcard-text">Ce séminaire m'a permis de prendre confiance. J'ai reçu bien plus que des outils — c'est une petite expérience de vie.</p><div class="tcard-author"><div class="avatar">MK</div><div><div class="auth-name">Mik</div><div class="auth-role">Participant · Formation collective</div></div></div></div>
+      <div class="tcard" data-r><span class="tcard-mark">"</span><p class="tcard-text">Un coaching professionnel sans complaisance, d'une redoutable efficacité. Aujourd'hui encore j'utilise ses méthodes.</p><div class="tcard-author"><div class="avatar">GC</div><div><div class="auth-name">Ghislain Camus</div><div class="auth-role">Coach · TEDx IESEG</div></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:40px;"><a onclick="showPage('temoignages')" class="btn-outline">Voir tous les témoignages</a></div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients">
+    <div class="clients-head" data-r>Ils font confiance à Impactacom</div>
+    <div class="clients-row" data-r>
+      <div class="chip">Ministère des Armées</div><div class="chip">Armée de l'Air & de l'Espace</div>
+      <div class="chip">Petit Bateau</div><div class="chip">Peugeot</div><div class="chip">Orange</div>
+      <div class="chip">IDEMIA</div><div class="chip">GEM Grenoble</div><div class="chip">Paris Dauphine</div>
+      <div class="chip">Ponts & Chaussées</div><div class="chip">IESEG</div><div class="chip">Pôle Léonard de Vinci</div>
+      <div class="chip">EFREI</div><div class="chip">TEDx IESEG</div><div class="chip">Aptiv</div><div class="chip">Académie du Service</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="cta-inner">
+      <div data-r>
+        <h2 class="cta-title">Prêt(e) à prendre<br>la parole <em>autrement ?</em></h2>
+        <p class="cta-sub">Commencez par une séance diagnostic gratuite de 30 minutes pour identifier vos leviers de progression.</p>
+      </div>
+      <div class="cta-btns" data-r>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">Réserver ma séance gratuite</a>
+        <a onclick="showPage('contact')" class="btn-cta-out">Envoyer un message</a>
+        <p class="cta-note">Ou appelez le <a href="tel:0613547005">06 13 54 70 05</a> · Lun–Ven 9h–18h</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <div class="nav-logo" onclick="showPage('home')" style="margin-bottom:0;">
+          <div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div>
+          <div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div>
+        </div>
+        <p class="foot-tagline">Libérez votre potentiel oratoire<br>avec une méthode unique.</p>
+      </div>
+      <div>
+        <div class="foot-h">Programmes</div>
+        <ul class="foot-links">
+          <li><a onclick="showPage('programmes')">Training en ligne</a></li>
+          <li><a onclick="showPage('programmes')">Accompagnement individuel</a></li>
+          <li><a onclick="showPage('programmes')">Formation collective</a></li>
+          <li><a href="https://impactacom.fr/blog/" target="_blank">Blog & ressources</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <div class="foot-h">Contact</div>
+        <p>108 rue Michel-Ange — 75016 Paris</p>
+        <p><a href="tel:0613547005">06 13 54 70 05</a></p>
+        <p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p>
+        <p style="margin-top:14px;"><a href="https://www.linkedin.com/in/corinnebarois/" target="_blank">LinkedIn ↗</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2025 Impactacom — Corinne Barois. Tous droits réservés.</span>
+      <div class="foot-legal">
+        <a onclick="showPage('mentions')" style="cursor:pointer;">Mentions légales</a>
+        <a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialité</a>
+        <a href="https://impactacom.fr/conditions-generales-de-vente/" target="_blank">CGV</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE PROGRAMMES                                      -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-programmes">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-tag"><span style="width:6px;height:6px;border-radius:50%;background:#6B4FA0;display:block;"></span>Programmes de formation</div>
+      <h1>Trouvez la formule<br><em>qui vous correspond</em></h1>
+      <p>Chaque programme est conçu pour s'adapter à votre rythme, vos objectifs et votre contexte. Une séance diagnostic gratuite vous permet de choisir avec certitude.</p>
+    </div>
+  </div>
+
+  <div class="prog-detail">
+
+    <!-- TRAINING EN LIGNE -->
+    <div class="prog-item" style="margin-bottom:2px;">
+      <div class="prog-left">
+        <div class="prog-format">10h &middot; 6 sessions &middot; Classe virtuelle</div>
+        <h2 class="prog-name">Training en ligne</h2>
+        <p class="prog-desc">Un parcours structuré en classe virtuelle pour développer votre aisance oratoire. Idéal pour les professionnels avec un agenda chargé.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
+          <a onclick="showPage('formation-training')" class="btn-main">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-left:4px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-outline">Séance gratuite</a>
+        </div>
+      </div>
+      <div class="prog-right">
+        <div class="prog-includes">Ce que comprend ce programme</div>
+        <ul class="prog-features">
+          <li>1h de diagnostic à distance pour définir les besoins</li>
+          <li>2h de formation en techniques oratoires</li>
+          <li>2h d'efficacité émotionnelle et relationnelle</li>
+          <li>2h de techniques rédactionnelles</li>
+          <li>2h d'entraînement à l'impact sur un cas concret</li>
+          <li>Journal de Bord personnalisé &amp; suivi rédactionnel</li>
+        </ul>
+        <div style="margin-top:20px;padding:14px 16px;background:var(--lilac);border-radius:6px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:var(--muted);">Tarif</span>
+          <span style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">1 600 €</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCOMPAGNEMENT INDIVIDUEL -->
+    <div class="prog-item featured" style="margin-bottom:2px;">
+      <div class="prog-left">
+        <div class="prog-badge-wrap"><div class="prog-badge">Le plus choisi</div></div>
+        <div class="prog-format" style="color:rgba(255,255,255,.5);">14h &middot; 8 sessions &middot; Présentiel &amp; distanciel</div>
+        <h2 class="prog-name">Accompagnement individuel</h2>
+        <p class="prog-desc">Un coaching sur-mesure pour transformer votre leadership oral en profondeur. La formule la plus efficace pour des résultats durables.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
+          <a onclick="showPage('formation-individuel')" class="btn-main" style="background:white;color:#2D1F4E;">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-left:4px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:15px 24px;font-size:13px;font-weight:500;text-decoration:none;border-radius:3px;transition:all .2s;">Séance gratuite</a>
+        </div>
+      </div>
+      <div class="prog-right">
+        <div class="prog-includes">Ce que comprend ce programme</div>
+        <ul class="prog-features">
+          <li>Diagnostic complet de vos forces et axes de progrès</li>
+          <li>2h de techniques oratoires</li>
+          <li>2h d'efficacité émotionnelle et relationnelle</li>
+          <li>2h de techniques rédactionnelles</li>
+          <li>2h d'entraînement en présentiel + 2h en classe virtuelle</li>
+          <li>2h de coaching professionnel pour libérer son potentiel</li>
+          <li>Accès intranet &amp; Journal de Bord personnalisé</li>
+        </ul>
+        <div style="margin-top:20px;padding:14px 16px;background:rgba(255,255,255,.1);border-radius:6px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:rgba(255,255,255,.55);">Tarif</span>
+          <span style="font-family:var(--r);font-size:22px;font-weight:700;color:white;">3 800 €</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMATION COLLECTIVE -->
+    <div class="prog-item" style="margin-bottom:2px;">
+      <div class="prog-left">
+        <div class="prog-format">14h &middot; 2 jours &middot; Présentiel intra-entreprise</div>
+        <h2 class="prog-name">Formation collective</h2>
+        <p class="prog-desc">Un séminaire immersif sur 2 jours pour transformer la prise de parole de toute votre équipe. Jusqu'à 12 participants.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
+          <a onclick="showPage('formation-collective')" class="btn-main">Voir le programme <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-left:4px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a onclick="showPage('contact')" class="btn-outline">Demander un devis</a>
+        </div>
+      </div>
+      <div class="prog-right">
+        <div class="prog-includes">Ce que comprend ce programme</div>
+        <ul class="prog-features">
+          <li>Jour 1 : techniques théâtrales d'impact &amp; improvisation</li>
+          <li>Jour 2 : rédiger et incarner ses messages</li>
+          <li>Gestion des émotions et des objections</li>
+          <li>Jeux de rôle &amp; mises en situation réelles</li>
+          <li>Journal de Bord pour chaque participant</li>
+          <li>Certification possible via Formapro by Accertif</li>
+        </ul>
+        <div style="margin-top:20px;padding:14px 16px;background:var(--lilac);border-radius:6px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:var(--muted);">Tarif intra-entreprise</span>
+          <span style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">4 100 €</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRAMME SUR MESURE -->
+    <div class="prog-item" style="border:2px dashed var(--border);background:var(--off-white);">
+      <div class="prog-left">
+        <div class="prog-format" style="color:var(--muted);">Format libre &middot; Sur devis</div>
+        <h2 class="prog-name" style="color:var(--muted);">Programme sur mesure</h2>
+        <p class="prog-desc">Un programme entièrement personnalisé selon vos besoins spécifiques. Format, durée et contenu définis ensemble lors d'une séance diagnostic.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;">
+          <a onclick="showPage('formation-custom')" class="btn-main" style="background:var(--muted);">En savoir plus <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-left:4px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a onclick="showPage('contact')" class="btn-outline">Nous contacter</a>
+        </div>
+      </div>
+      <div class="prog-right">
+        <div class="prog-includes" style="color:var(--muted);">Ce programme peut inclure</div>
+        <ul class="prog-features">
+          <li>Techniques oratoires &amp; posture</li>
+          <li>Efficacité émotionnelle et relationnelle</li>
+          <li>Techniques rédactionnelles</li>
+          <li>Coaching professionnel</li>
+          <li>Mises en situation sur mesure</li>
+          <li>Format présentiel, distanciel ou hybride</li>
+        </ul>
+        <div style="margin-top:20px;padding:14px 16px;background:var(--white);border:1px solid var(--border);border-radius:6px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:var(--muted);">Tarif</span>
+          <span style="font-family:var(--r);font-size:18px;font-weight:700;color:var(--muted);">Sur devis</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="cta-sec">
+    <div class="cta-inner">
+      <div><h2 class="cta-title">Pas sûr(e) du<br><em>bon programme ?</em></h2><p class="cta-sub">La séance diagnostic gratuite est là pour ça. 30 minutes pour comprendre votre situation et définir ensemble la meilleure approche.</p></div>
+      <div class="cta-btns">
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">Réserver ma séance gratuite</a>
+        <a onclick="showPage('contact')" class="btn-cta-out">Poser une question</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Libérez votre potentiel oratoire avec une méthode unique.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li><li><a onclick="showPage('formation-custom')">Programme sur mesure</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions légales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialité</a></div></div></footer>
+</div>
+
+<div class="page" id="page-apropos">
+  <div class="apropos-hero">
+    <div class="apropos-left">
+      <div class="sec-eye" style="color:rgba(255,255,255,.45);" data-r><span style="display:block;width:28px;height:2px;background:rgba(255,255,255,.25);border-radius:1px;"></span>À propos</div>
+      <h1 style="font-family:var(--r);font-size:clamp(40px,5vw,64px);font-weight:700;line-height:1.08;color:white;margin-bottom:24px;" data-r>Corinne Barois —<br><em style="font-style:italic;font-weight:400;color:rgba(255,255,255,.55);">une méthode unique</em></h1>
+      <p style="font-size:17px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.7;max-width:500px;" data-r>Comédienne, coach et formatrice, Corinne Barois a développé une approche originale qui allie les techniques du théâtre au coaching professionnel pour libérer le potentiel oratoire de chacun.</p>
+    </div>
+    <div class="apropos-right">
+      <img src="https://impactacom.fr/wp-content/uploads/2025/12/Corinne-Barois-1-portrait-classique-souriant.jpeg" alt="Corinne Barois"/>
+    </div>
+  </div>
+
+  <div class="apropos-vals">
+    <div class="sec-eye" data-r>Les valeurs</div>
+    <h2 class="sec-title" data-r>Ce qui guide<br><em>chaque accompagnement</em></h2>
+    <div class="vals-grid">
+      <div class="val-card" data-r>
+        <div class="val-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
+        <div class="val-title">Authenticité</div>
+        <p class="val-text">La méthode ne cherche pas à vous transformer en quelqu'un d'autre, mais à révéler et amplifier votre personnalité naturelle face à vos audiences.</p>
+      </div>
+      <div class="val-card" data-r>
+        <div class="val-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="val-title">Bienveillance</div>
+        <p class="val-text">Chaque personne progresse à son rythme dans un cadre sécurisé et encourageant. La confiance se construit, elle ne se force pas.</p>
+      </div>
+      <div class="val-card" data-r>
+        <div class="val-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="val-title">Efficacité mesurable</div>
+        <p class="val-text">Chaque session produit des résultats concrets et mesurables. Les progrès sont visibles dès les premières séances.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="apropos-parcours">
+    <div class="sec-eye" data-r>Le parcours</div>
+    <h2 class="sec-title" data-r>23 ans d'expérience<br><em>au service de votre impact</em></h2>
+    <div class="parcours-grid">
+      <div class="parcours-timeline" data-r>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">16</span></div><div class="ptl-content"><div class="ptl-title">Premiers pas au cinéma et à la télévision</div><div class="ptl-text">Corinne débute sa carrière artistique, découvrant le pouvoir de la présence scénique.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:9px;">ENSATT</span></div><div class="ptl-content"><div class="ptl-title">Formation à l'École Nationale Supérieure des Arts Théâtraux</div><div class="ptl-text">Formation professionnelle de comédienne — techniques de jeu, voix, corps et présence.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2001</span></div><div class="ptl-content"><div class="ptl-title">Création des premiers ateliers en entreprise</div><div class="ptl-text">Lancement des ateliers "développement personnel par la pratique théâtrale" pour les professionnels.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2009</span></div><div class="ptl-content"><div class="ptl-title">Master II Coaching — Panthéon-Assas</div><div class="ptl-text">Diplôme d'état en coaching et développement personnel en entreprise. La méthode se structure.</div></div></div>
+      </div>
+      <div class="parcours-timeline" data-r>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2013</span></div><div class="ptl-content"><div class="ptl-title">Intégration dans les grandes écoles</div><div class="ptl-text">GEM Grenoble, Paris Dauphine, IESEG — formation Soft Skills auprès des futurs cadres.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2014</span></div><div class="ptl-content"><div class="ptl-title">Médiation Singulière — CNAM Entreprise</div><div class="ptl-text">Certification complémentaire en conduite de dispositifs de médiation et coaching professionnel.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2023</span></div><div class="ptl-content"><div class="ptl-title">Certification "Prendre la parole en public"</div><div class="ptl-text">Certification officielle avec assurance, pertinence et adaptabilité. Label Qualiopi obtenu.</div></div></div>
+        <div class="ptl-item"><div class="ptl-dot"><span class="ptl-year" style="font-size:10px;">2024</span></div><div class="ptl-content"><div class="ptl-title">Formapro by Accertif</div><div class="ptl-text">Intégration au réseau Formapro pour "Communiquer avec impact à l'oral en présentiel et à distance".</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="apropos-certifs">
+    <div class="sec-eye" data-r>Certifications & accréditations</div>
+    <h2 class="sec-title" data-r>Une formation<br><em>reconnue et certifiée</em></h2>
+    <div class="certifs-grid">
+      <div class="certif-card" data-r><div class="certif-num">Certification</div><div class="certif-name">Qualiopi</div><div class="certif-detail">Label qualité pour les formations professionnelles — N° 117 54 47 85 75. Valide jusqu'en 2028.</div></div>
+      <div class="certif-card" data-r><div class="certif-num">Certification</div><div class="certif-name">Formapro by Accertif</div><div class="certif-detail">"Communiquer avec impact à l'oral en présentiel et à distance" — certification reconnue.</div></div>
+      <div class="certif-card" data-r><div class="certif-num">Diplôme d'état</div><div class="certif-name">Master II Coaching</div><div class="certif-detail">Coaching et développement personnel en entreprise — Université Panthéon-Assas Paris 2.</div></div>
+      <div class="certif-card" data-r><div class="certif-num">Formation</div><div class="certif-name">ENSATT</div><div class="certif-detail">École Nationale Supérieure des Arts et Techniques Théâtrales — formation de comédienne professionnelle.</div></div>
+    </div>
+  </div>
+
+  <section class="cta-sec">
+    <div class="cta-inner">
+      <div><h2 class="cta-title">Rencontrons-nous<br><em>pour en parler</em></h2><p class="cta-sub">Une conversation de 30 minutes suffit pour comprendre vos enjeux et définir la meilleure approche ensemble.</p></div>
+      <div class="cta-btns"><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">Réserver ma séance gratuite</a><a onclick="showPage('contact')" class="btn-cta-out">Me contacter</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <div><div class="nav-logo" onclick="showPage('home')"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Libérez votre potentiel oratoire avec une méthode unique.</p></div>
+      <div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('programmes')">Training en ligne</a></li><li><a onclick="showPage('programmes')">Accompagnement individuel</a></li><li><a onclick="showPage('programmes')">Formation collective</a></li></ul></div>
+      <div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange — 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div>
+    </div>
+    <div class="foot-bottom"><span class="foot-copy">© 2025 Impactacom — Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions légales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialité</a></div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE TÉMOIGNAGES                                     -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-temoignages">
+  <div class="testi-page-hero" style="padding-top:160px;">
+    <div style="max-width:700px;">
+      <div class="page-hero-tag"><span style="width:6px;height:6px;border-radius:50%;background:#6B4FA0;display:block;"></span>Témoignages</div>
+      <h1 style="font-family:var(--r);font-size:clamp(40px,5vw,64px);font-weight:700;line-height:1.08;color:white;margin-bottom:20px;">Ce qu'ils disent<br><em style="font-style:italic;font-weight:400;color:rgba(255,255,255,.55);">de la formation</em></h1>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <div><div style="font-family:var(--r);font-size:52px;font-weight:700;color:white;line-height:1;">Excellent</div><div style="font-size:20px;color:var(--plum);letter-spacing:3px;margin-top:4px;">★★★★★</div><div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:6px;">11 avis vérifiés · Google</div></div>
+        <div style="width:1px;height:80px;background:rgba(255,255,255,.15);"></div>
+        <div style="font-size:16px;font-weight:300;color:rgba(255,255,255,.65);max-width:400px;line-height:1.65;">Des professionnels de tous secteurs témoignent de leur transformation et de l'impact concret sur leur carrière.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testi-all-grid">
+    <div class="testi-big-grid">
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Grâce à sa bienveillance, j'ai progressé considérablement. Je me sens beaucoup plus à l'aise pour parler en public. En plus, étant de langue maternelle italienne, j'arrivais à surmonter cette habitude sans perdre mon accent et ma personnalité.</p><div class="tcard-author"><div class="avatar">FC</div><div><div class="auth-name">Federica Cacco</div><div class="auth-role">Manager · Formation individuelle</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Ce séminaire m'a permis de prendre confiance dans mes prises de parole. J'attendais des outils et des méthodes mais j'ai reçu bien plus, c'est une petite expérience de vie.</p><div class="tcard-author"><div class="avatar">MK</div><div><div class="auth-name">Mik</div><div class="auth-role">Participant · Formation collective</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">La formation est très intéressante. Corinne est une personne passionnée par son sujet et communique sa passion en y apportant beaucoup de son vécu. Son dynamisme et sa sympathie nous ont permis de rester attentif pendant ces 2 jours.</p><div class="tcard-author"><div class="avatar">ID</div><div><div class="auth-name">Isabelle Dauger</div><div class="auth-role">Participante · Formation collective</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Un coaching professionnel sans complaisance avec une redoutable efficacité. Aujourd'hui encore j'utilise ses méthodes dans mes interventions et présentations clients.</p><div class="tcard-author"><div class="avatar">GC</div><div><div class="auth-name">Ghislain Camus</div><div class="auth-role">Coach professionnel · TEDx IESEG</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Sa méthode a permis de réduire mon stress et clarifier mes messages clés. Son accompagnement est aussi bienveillant qu'aiguisé et je ne peux que vous recommander ses services.</p><div class="tcard-author"><div class="avatar">FF</div><div><div class="auth-name">Fleur Four</div><div class="auth-role">Fondatrice — Ma Pause à Moi</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Nos intervenants se sont sentis écoutés et accompagnés. Le travail effectué a eu l'effet d'un catalyseur sur la performance des speakers et l'impact des interventions en a été grandement amélioré.</p><div class="tcard-author"><div class="avatar">TM</div><div><div class="auth-name">Thibault-Louis Meret</div><div class="auth-role">Responsable TEDx IESEG</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Corinne Barois m'a aidé à me libérer lors de mes prises de parole, que ce soit sur le fond ou sur la forme. Grâce à ce coaching j'ai pu travailler ma communication pour qu'elle soit plus impactante.</p><div class="tcard-author"><div class="avatar">JH</div><div><div class="auth-name">Joanny Hervé</div><div class="auth-role">Président / La Tribune IESEG</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">Corinne Barois m'a accompagné dans la préparation de ma conférence. Elle m'a aidé à structurer mon intervention, identifier les messages clés et trouver la bonne posture. Professionnalisme, écoute et bienveillance.</p><div class="tcard-author"><div class="avatar">MC</div><div><div class="auth-name">Marc C.</div><div class="auth-role">Commandement · Base aérienne de Cazaux</div></div></div></div>
+      <div class="tcard"><span class="tcard-mark">"</span><p class="tcard-text">J'ai eu la chance d'être invité à présenter mon projet "Ça commence par moi". Corinne m'a accompagné dans la construction de mon talk. Ce travail m'a apporté des éléments de réflexion pour approfondir la présentation.</p><div class="tcard-author"><div class="avatar">JV</div><div><div class="auth-name">Julien Vidal</div><div class="auth-role">Ça Commence par Moi</div></div></div></div>
+    </div>
+  </div>
+
+  <section class="clients"><div class="clients-head">Ils font confiance à Impactacom</div><div class="clients-row"><div class="chip">Ministère des Armées</div><div class="chip">Armée de l'Air & de l'Espace</div><div class="chip">Petit Bateau</div><div class="chip">Peugeot</div><div class="chip">Orange</div><div class="chip">IDEMIA</div><div class="chip">GEM Grenoble</div><div class="chip">Paris Dauphine</div><div class="chip">Ponts & Chaussées</div><div class="chip">IESEG</div><div class="chip">Pôle Léonard de Vinci</div><div class="chip">EFREI</div><div class="chip">TEDx IESEG</div><div class="chip">Aptiv</div><div class="chip">Académie du Service</div></div></section>
+
+  <section class="cta-sec"><div class="cta-inner"><div><h2 class="cta-title">Rejoignez les<br><em>professionnels formés</em></h2><p class="cta-sub">Commencez par une séance diagnostic gratuite de 30 minutes.</p></div><div class="cta-btns"><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">Réserver ma séance gratuite</a><a onclick="showPage('contact')" class="btn-cta-out">Me contacter</a></div></div></section>
+
+  <footer>
+    <div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Libérez votre potentiel oratoire avec une méthode unique.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('programmes')">Training en ligne</a></li><li><a onclick="showPage('programmes')">Accompagnement individuel</a></li><li><a onclick="showPage('programmes')">Formation collective</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange — 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div>
+    <div class="foot-bottom"><span class="foot-copy">© 2025 Impactacom — Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions légales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialité</a></div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE CONTACT                                         -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <div class="sec-eye" data-r>Contact</div>
+      <h2 class="sec-title" data-r>Parlons de<br>votre <em>projet</em></h2>
+      <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.7;margin-top:16px;" data-r>Remplissez le formulaire ou contactez-moi directement. Je vous réponds sous 24h ouvrées.</p>
+      <div class="contact-info" data-r>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.72 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17z"/></svg></div>
+          <div><div class="cinfo-label">Téléphone</div><div class="cinfo-val"><a href="tel:0613547005">06 13 54 70 05</a></div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="cinfo-label">Email</div><div class="cinfo-val"><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="cinfo-label">Adresse</div><div class="cinfo-val">108 rue Michel-Ange<br>75016 Paris</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div><div class="cinfo-label">Disponibilités</div><div class="cinfo-val">Lun–Ven · 9h–18h</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h2>Envoyez votre message</h2>
+      <p>Je vous réponds dans les 24h ouvrées.</p>
+      <div id="contactSuccess" class="form-success">
+        <div style="font-size:32px;margin-bottom:12px;">✓</div>
+        <div style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);margin-bottom:8px;">Message envoyé !</div>
+        <p style="font-size:14px;color:var(--muted);">Corinne vous répondra sous 24h ouvrées. À très bientôt !</p>
+      </div>
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Prénom</label><input type="text" class="form-input" placeholder="Votre prénom" required></div>
+          <div class="form-group"><label class="form-label">Nom</label><input type="text" class="form-input" placeholder="Votre nom" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label class="form-label">Téléphone</label><input type="tel" class="form-input" placeholder="06 XX XX XX XX"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Programme souhaité</label>
+          <select class="form-select">
+            <option value="">Choisir un programme…</option>
+            <option>Training en ligne (3 mois)</option>
+            <option>Accompagnement individuel (3–6 mois)</option>
+            <option>Formation collective (2 jours)</option>
+            <option>Séance diagnostic gratuite</option>
+            <option>Autre / Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Votre message</label><textarea class="form-textarea" placeholder="Décrivez votre situation, vos objectifs, vos questions…" required></textarea></div>
+        <button type="submit" class="form-submit">Envoyer mon message</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Libérez votre potentiel oratoire avec une méthode unique.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('programmes')">Training en ligne</a></li><li><a onclick="showPage('programmes')">Accompagnement individuel</a></li><li><a onclick="showPage('programmes')">Formation collective</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange — 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div>
+    <div class="foot-bottom"><span class="foot-copy">© 2025 Impactacom — Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions légales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialité</a></div></div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE FORMATION — TRAINING EN LIGNE                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-formation-training">
+  <div class="fpage-hero">
+    <button class="fpage-back" onclick="showPage('programmes')">&#8592; Retour aux programmes</button>
+    <div class="fpage-tag"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);display:block;"></span>Formation individuelle &middot; Classe virtuelle</div>
+    <h1 class="fpage-title">Training <em>en ligne</em></h1>
+    <p class="fpage-sub">Communiquez avec impact pour capter et maintenir l'attention de vos interlocuteurs. 10 heures de formation en classe virtuelle.</p>
+    <div class="fpage-meta">
+      <div class="fmeta"><span class="fmeta-label">Dur&eacute;e</span><span class="fmeta-val">10 heures</span></div>
+      <div class="fmeta"><span class="fmeta-label">Sessions</span><span class="fmeta-val">6 rendez-vous</span></div>
+      <div class="fmeta"><span class="fmeta-label">Format</span><span class="fmeta-val">Classe virtuelle</span></div>
+      <div class="fmeta"><span class="fmeta-label">Tarif</span><span class="fmeta-val">1 600 &euro; net de TVA</span></div>
+    </div>
+  </div>
+  <div class="fpage-body">
+    <div class="fpage-content">
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div><div><div class="fmodule-title">Techniques oratoires</div><div class="fmodule-sub">Consolider ses comp&eacute;tences verbales, paraverbales et non verbales</div></div></div><ul class="fmodule-list"><li>Posture, regard, gestion des silences</li><li>Respiration, gestion du stress et de ses &eacute;motions</li><li>Articulation, diction, voix plac&eacute;e</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="fmodule-title">Efficacit&eacute; &eacute;motionnelle et relationnelle</div><div class="fmodule-sub">Incarner son r&ocirc;le et agir dans la relation</div></div></div><ul class="fmodule-list"><li>S&eacute;lectionner les &eacute;motions dont le projet a besoin</li><li>Cr&eacute;er et nourrir la relation pendant l'allocution</li><li>Cadrer les &eacute;changes et g&eacute;rer les objections</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div><div><div class="fmodule-title">Techniques r&eacute;dactionnelles</div><div class="fmodule-sub">Structurer ses messages dans le sens de ses objectifs</div></div></div><ul class="fmodule-list"><li>Choisir son plan et ses id&eacute;es</li><li>Ordonner ses arguments et ses exemples</li><li>V&eacute;rifier sa m&eacute;thode de m&eacute;morisation</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><div><div class="fmodule-title">Mise en situation</div><div class="fmodule-sub">S'entra&icirc;ner &agrave; d&eacute;clencher les impacts</div></div></div><ul class="fmodule-list"><li>Fixer un objectif de qualit&eacute; mesurable</li><li>Pratiquer son allocution en s'appuyant sur les crit&egrave;res de r&eacute;ussite</li><li>Aller au bout de ses id&eacute;es et &eacute;valuer leur impact</li></ul></div>
+    </div>
+    <div class="fpage-sidebar"><div class="fcard-sticky">
+      <div class="fprice-card">
+        <div class="fprice-label">Tarif</div><div class="fprice-val">1 600 &euro;</div>
+        <div class="fprice-detail">Net de TVA &middot; Tous frais inclus<br>El&eacute;gible aux financements formation professionnelle</div>
+        <hr class="fprice-sep">
+        <div class="fprice-info">
+          <div class="fpinfo-row"><span class="fpinfo-label">Dur&eacute;e totale</span><span class="fpinfo-val">10 heures</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Sessions</span><span class="fpinfo-val">6 rendez-vous</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Format</span><span class="fpinfo-val">100% en ligne</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Pr&eacute;requis</span><span class="fpinfo-val">Aucun</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Public</span><span class="fpinfo-val">Manager, salari&eacute;, ind&eacute;pendant</span></div>
+        </div>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-main" style="width:100%;justify-content:center;">R&eacute;server ma s&eacute;ance gratuite</a>
+        <a onclick="showPage('contact')" class="btn-outline" style="width:100%;justify-content:center;margin-top:10px;">Demander un devis</a>
+      </div>
+      <div class="fspec-card"><div class="fspec-title">Inclus dans la formation</div><ul class="fspec-list"><li>S&eacute;ance expertise 45 min offerte</li><li>1h diagnostic &agrave; distance</li><li>Journal de Bord personnalis&eacute;</li><li>Suivi r&eacute;dactionnel des productions</li><li>Certificat de r&eacute;alisation</li><li>Adaptations handicap sur demande</li></ul></div>
+      <div class="feval-card"><div class="feval-title">Suivi &amp; &eacute;valuation</div><ul class="feval-list"><li>Test de positionnement</li><li>Plan d'accompagnement</li><li>Test des comp&eacute;tences acquises</li><li>Evaluation en fin de formation</li><li>Feuille de pr&eacute;sence</li></ul></div>
+    </div></div>
+  </div>
+  <section class="cta-sec"><div class="cta-inner"><div><h2 class="cta-title">Pr&ecirc;t(e) &agrave; d&eacute;marrer <em>le training ?</em></h2><p class="cta-sub">Commencez par une s&eacute;ance diagnostic de 45 minutes pour personnaliser votre parcours.</p></div><div class="cta-btns"><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">R&eacute;server ma s&eacute;ance gratuite</a><a onclick="showPage('contact')" class="btn-cta-out">Demander un devis</a></div></div></section>
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Lib&eacute;rez votre potentiel oratoire.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li><li><a onclick="showPage('formation-custom')">Programme sur mesure</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions l&eacute;gales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialit&eacute;</a></div></div></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE FORMATION — ACCOMPAGNEMENT INDIVIDUEL           -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-formation-individuel">
+  <div class="fpage-hero">
+    <button class="fpage-back" onclick="showPage('programmes')">&#8592; Retour aux programmes</button>
+    <div class="fpage-tag"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);display:block;"></span>Coaching individuel &middot; Pr&eacute;sentiel &amp; distanciel</div>
+    <h1 class="fpage-title">Accompagnement <em>individuel</em></h1>
+    <p class="fpage-sub">Communiquez avec impact pour d&eacute;clencher l'adh&eacute;sion et l'engagement de vos interlocuteurs. Un coaching sur-mesure sur 3 &agrave; 6 mois.</p>
+    <div class="fpage-meta">
+      <div class="fmeta"><span class="fmeta-label">Dur&eacute;e</span><span class="fmeta-val">14 heures</span></div>
+      <div class="fmeta"><span class="fmeta-label">Sessions</span><span class="fmeta-val">8 rendez-vous</span></div>
+      <div class="fmeta"><span class="fmeta-label">Format</span><span class="fmeta-val">Pr&eacute;sentiel + distanciel</span></div>
+      <div class="fmeta"><span class="fmeta-label">Tarif</span><span class="fmeta-val">3 800 &euro; net de TVA</span></div>
+    </div>
+  </div>
+  <div class="fpage-body">
+    <div class="fpage-content">
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div><div><div class="fmodule-title">Techniques oratoires</div><div class="fmodule-sub">Consolider ses comp&eacute;tences verbales, paraverbales et non verbales</div></div></div><ul class="fmodule-list"><li>Posture, regard, gestion des silences</li><li>Respiration, gestion du stress et de ses &eacute;motions</li><li>Articulation, diction, voix plac&eacute;e</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="fmodule-title">Efficacit&eacute; &eacute;motionnelle et relationnelle</div><div class="fmodule-sub">Incarner son r&ocirc;le et agir dans la relation</div></div></div><ul class="fmodule-list"><li>Identifier les besoins de l'audience et ses attentes</li><li>D&eacute;velopper sa posture d'&eacute;coute et contr&ocirc;ler les &eacute;changes</li><li>Incarner son leadership et accompagner les &eacute;motions de ses &eacute;quipes</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div><div><div class="fmodule-title">Techniques r&eacute;dactionnelles</div><div class="fmodule-sub">Choisir ses messages dans le sens de ses objectifs</div></div></div><ul class="fmodule-list"><li>Choisir la structure adapt&eacute;e &agrave; chaque situation</li><li>Identifier et mettre en mots ses messages cl&eacute;s</li><li>Anticiper et accompagner les objections</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><div><div class="fmodule-title">Mise en situation</div><div class="fmodule-sub">S'entra&icirc;ner &agrave; d&eacute;clencher les impacts</div></div></div><ul class="fmodule-list"><li>Mise en situation en pr&eacute;sentiel et jeux de r&ocirc;les</li><li>Mise en situation en ligne et jeux de r&ocirc;les</li><li>Aller au bout de ses id&eacute;es et &eacute;valuer leur impact</li></ul></div>
+      <div class="fmodule" style="border-color:var(--violet);"><div class="fmodule-head"><div class="fmodule-icon" style="background:var(--violet);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div><div class="fmodule-title" style="color:var(--violet);">Coaching professionnel</div><div class="fmodule-sub">Identifier et d&eacute;passer ses freins</div></div></div><ul class="fmodule-list"><li>Visiter ses croyances pour les d&eacute;passer</li><li>Consolider ses besoins physiologiques, r&eacute;dactionnels et &eacute;motionnels</li><li>Apprendre &agrave; s'auto-&eacute;valuer pour rester dans une d&eacute;marche de qualit&eacute;</li></ul></div>
+    </div>
+    <div class="fpage-sidebar"><div class="fcard-sticky">
+      <div class="fprice-card">
+        <div class="fprice-label">Tarif</div><div class="fprice-val">3 800 &euro;</div>
+        <div class="fprice-detail">Net de TVA &middot; Tous frais inclus<br>El&eacute;gible aux financements formation professionnelle</div>
+        <hr class="fprice-sep">
+        <div class="fprice-info">
+          <div class="fpinfo-row"><span class="fpinfo-label">Dur&eacute;e totale</span><span class="fpinfo-val">14 heures</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Sessions</span><span class="fpinfo-val">8 rendez-vous</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Format</span><span class="fpinfo-val">Pr&eacute;sentiel &amp; distanciel</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Lieu</span><span class="fpinfo-val">Paris centre + en ligne</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Public</span><span class="fpinfo-val">Dirigeant, cadre, conf&eacute;rencier</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Pr&eacute;requis</span><span class="fpinfo-val">Prise de parole en &eacute;quipe</span></div>
+        </div>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-main" style="width:100%;justify-content:center;">R&eacute;server ma s&eacute;ance gratuite</a>
+        <a onclick="showPage('contact')" class="btn-outline" style="width:100%;justify-content:center;margin-top:10px;">Demander un devis</a>
+      </div>
+      <div class="fspec-card"><div class="fspec-title">Inclus dans le programme</div><ul class="fspec-list"><li>S&eacute;ance expertise 45 min offerte</li><li>1h diagnostic &agrave; distance</li><li>Acc&egrave;s intranet &amp; Journal de Bord</li><li>Suivi r&eacute;dactionnel personnalis&eacute;</li><li>Coaching lib&eacute;ration du potentiel</li><li>Certificat de r&eacute;alisation</li></ul></div>
+      <div class="feval-card"><div class="feval-title">Suivi &amp; &eacute;valuation</div><ul class="feval-list"><li>Test de positionnement</li><li>Plan d'accompagnement</li><li>Test des comp&eacute;tences acquises</li><li>Evaluation en fin de formation</li><li>Certificat de r&eacute;alisation</li><li>Feuille de pr&eacute;sences</li></ul></div>
+    </div></div>
+  </div>
+  <section class="cta-sec"><div class="cta-inner"><div><h2 class="cta-title">Pr&ecirc;t(e) &agrave; transformer <em>votre leadership oral ?</em></h2><p class="cta-sub">Commencez par une s&eacute;ance diagnostic de 45 minutes pour d&eacute;finir votre programme sur-mesure.</p></div><div class="cta-btns"><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">R&eacute;server ma s&eacute;ance gratuite</a><a onclick="showPage('contact')" class="btn-cta-out">Demander un devis</a></div></div></section>
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Lib&eacute;rez votre potentiel oratoire.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li><li><a onclick="showPage('formation-custom')">Programme sur mesure</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions l&eacute;gales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialit&eacute;</a></div></div></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE FORMATION — FORMATION COLLECTIVE                -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-formation-collective">
+  <div class="fpage-hero">
+    <button class="fpage-back" onclick="showPage('programmes')">&#8592; Retour aux programmes</button>
+    <div class="fpage-tag"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);display:block;"></span>Formation d'&eacute;quipe &middot; Pr&eacute;sentiel intra-entreprise</div>
+    <h1 class="fpage-title">Formation <em>collective</em></h1>
+    <p class="fpage-sub">Offrez &agrave; vos &eacute;quipes les essentiels pour communiquer avec impact. 2 jours intensifs en pr&eacute;sentiel.</p>
+    <div class="fpage-meta">
+      <div class="fmeta"><span class="fmeta-label">Dur&eacute;e</span><span class="fmeta-val">14 heures</span></div>
+      <div class="fmeta"><span class="fmeta-label">Format</span><span class="fmeta-val">2 jours cons&eacute;cutifs</span></div>
+      <div class="fmeta"><span class="fmeta-label">Lieu</span><span class="fmeta-val">Paris et r&eacute;gions</span></div>
+      <div class="fmeta"><span class="fmeta-label">Tarif</span><span class="fmeta-val">4 100 &euro; net de TVA</span></div>
+    </div>
+  </div>
+  <div class="fpage-body">
+    <div class="fpage-content">
+      <div style="background:var(--lilac);border-radius:8px;padding:24px;margin-bottom:20px;"><div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--violet-soft);margin-bottom:12px;">Programme &mdash; 2 jours</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;"><div style="background:var(--white);border-radius:6px;padding:16px;"><div style="font-size:13px;font-weight:700;color:var(--violet);margin-bottom:6px;">Jour 1 &mdash; 7 heures</div><div style="font-size:13px;color:var(--muted);">Techniques oratoires d'impact : acquisition, exercice, mise en pratique, improvisation</div></div><div style="background:var(--white);border-radius:6px;padding:16px;"><div style="font-size:13px;font-weight:700;color:var(--violet);margin-bottom:6px;">Jour 2 &mdash; 7 heures</div><div style="font-size:13px;color:var(--muted);">R&eacute;diger et incarner ses messages : m&eacute;thode et entra&icirc;nement pour gagner en aisance</div></div></div></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div><div class="fmodule-title">Acquisition en techniques th&eacute;&acirc;trales</div><div class="fmodule-sub">D&eacute;veloppement des comp&eacute;tences orales</div></div></div><ul class="fmodule-list"><li>Posture, regard, gestion des silences</li><li>Respiration, gestion du stress et de ses &eacute;motions</li><li>Articulation, diction, voix plac&eacute;e</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><div><div class="fmodule-title">Ma&icirc;trise des allocutions construites</div><div class="fmodule-sub">M&eacute;thode pour r&eacute;diger et retenir son allocution</div></div></div><ul class="fmodule-list"><li>Techniques pour rassembler ses id&eacute;es et construire ses arguments</li><li>Techniques pour r&eacute;p&eacute;ter, m&eacute;moriser et retenir ses messages cl&eacute;s</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="fmodule-title">Efficacit&eacute; &eacute;motionnelle en public</div><div class="fmodule-sub">Accompagner le changement dans l'&eacute;change</div></div></div><ul class="fmodule-list"><li>Gestion des &eacute;motions</li><li>Posture relationnelle et aisance dans les &eacute;changes</li><li>Gestion des objections et adaptabilit&eacute;</li><li>Gestion des questions/r&eacute;ponses dans le sens de son objectif</li></ul></div>
+    </div>
+    <div class="fpage-sidebar"><div class="fcard-sticky">
+      <div class="fprice-card">
+        <div class="fprice-label">Tarif intra-entreprise</div><div class="fprice-val">4 100 &euro;</div>
+        <div class="fprice-detail">Net de TVA &middot; Tous frais inclus<br>El&eacute;gible aux financements formation professionnelle</div>
+        <hr class="fprice-sep">
+        <div class="fprice-info">
+          <div class="fpinfo-row"><span class="fpinfo-label">Dur&eacute;e</span><span class="fpinfo-val">14h &mdash; 2 jours</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Participants</span><span class="fpinfo-val">Jusqu'&agrave; 12 personnes</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Format</span><span class="fpinfo-val">Pr&eacute;sentiel</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Lieu</span><span class="fpinfo-val">Paris et r&eacute;gions</span></div>
+          <div class="fpinfo-row"><span class="fpinfo-label">Pr&eacute;requis</span><span class="fpinfo-val">Aucun</span></div>
+        </div>
+        <a onclick="showPage('contact')" class="btn-main" style="width:100%;justify-content:center;">Demander un devis</a>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-outline" style="width:100%;justify-content:center;margin-top:10px;">S&eacute;ance d&eacute;couverte</a>
+      </div>
+      <div class="fspec-card"><div class="fspec-title">Inclus dans la formation</div><ul class="fspec-list"><li>Journal de Bord pour chaque participant</li><li>Ressources p&eacute;dagogiques compl&egrave;tes</li><li>Jeux de r&ocirc;le &amp; mises en situation</li><li>Apports th&eacute;oriques &amp; bibliographie</li><li>Certification possible (Formapro)</li></ul></div>
+      <div class="feval-card"><div class="feval-title">Suivi &amp; &eacute;valuation</div><ul class="feval-list"><li>Test de positionnement</li><li>Test des comp&eacute;tences acquises</li><li>Evaluation en fin de formation</li><li>Feuille de pr&eacute;sence</li></ul></div>
+    </div></div>
+  </div>
+  <section class="cta-sec"><div class="cta-inner"><div><h2 class="cta-title">Former votre &eacute;quipe <em>&agrave; l'impact oral ?</em></h2><p class="cta-sub">Contactez-nous pour un devis personnalis&eacute; selon votre &eacute;quipe et vos objectifs.</p></div><div class="cta-btns"><a onclick="showPage('contact')" class="btn-cta-w">Demander un devis</a><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-out">S&eacute;ance d&eacute;couverte</a></div></div></section>
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Lib&eacute;rez votre potentiel oratoire.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li><li><a onclick="showPage('formation-custom')">Programme sur mesure</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions l&eacute;gales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialit&eacute;</a></div></div></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE FORMATION — PROGRAMME SUR MESURE               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-formation-custom">
+  <div class="fpage-hero">
+    <button class="fpage-back" onclick="showPage('programmes')">&#8592; Retour aux programmes</button>
+    <div class="fpage-tag"><span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);display:block;"></span>Nouveau programme &middot; &Agrave; personnaliser</div>
+    <h1 class="fpage-title">Programme <em>sur mesure</em></h1>
+    <p class="fpage-sub">Un programme enti&egrave;rement con&ccedil;u autour de vos besoins sp&eacute;cifiques. Format, dur&eacute;e et contenu d&eacute;finis ensemble.</p>
+    <div class="fpage-meta">
+      <div class="fmeta"><span class="fmeta-label">Dur&eacute;e</span><span class="fmeta-val">&Agrave; d&eacute;finir</span></div>
+      <div class="fmeta"><span class="fmeta-label">Format</span><span class="fmeta-val">Pr&eacute;sentiel, distanciel ou hybride</span></div>
+      <div class="fmeta"><span class="fmeta-label">Tarif</span><span class="fmeta-val">Sur devis</span></div>
+      <div class="fmeta"><span class="fmeta-label">Public</span><span class="fmeta-val">Tout professionnel</span></div>
+    </div>
+  </div>
+  <div class="fpage-body">
+    <div class="fpage-content">
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><div class="fmodule-title">Diagnostic personnalis&eacute;</div><div class="fmodule-sub">Comprendre vos besoins sp&eacute;cifiques</div></div></div><ul class="fmodule-list"><li>Entretien approfondi pour cerner votre contexte professionnel</li><li>Identification de vos points forts et axes de progression</li><li>D&eacute;finition des objectifs mesurables</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="fmodule-title">Contenu 100% personnalis&eacute;</div><div class="fmodule-sub">Adapt&eacute; &agrave; votre secteur et vos enjeux</div></div></div><ul class="fmodule-list"><li>Modules s&eacute;lectionn&eacute;s selon vos besoins prioritaires</li><li>Etudes de cas tir&eacute;es de votre r&eacute;alit&eacute; professionnelle</li><li>Mises en situation sur vos vraies interventions &agrave; venir</li></ul></div>
+      <div class="fmodule"><div class="fmodule-head"><div class="fmodule-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg></div><div><div class="fmodule-title">Format flexible</div><div class="fmodule-sub">Selon vos contraintes et votre rythme</div></div></div><ul class="fmodule-list"><li>Pr&eacute;sentiel &agrave; Paris ou en r&eacute;gions</li><li>Classe virtuelle (Google Meet)</li><li>Format hybride pr&eacute;sentiel + distanciel</li><li>Intensif ou &eacute;tal&eacute; dans le temps</li></ul></div>
+    </div>
+    <div class="fpage-sidebar"><div class="fcard-sticky">
+      <div class="fprice-card">
+        <div class="fprice-label">Tarif</div><div class="fprice-val" style="font-size:28px;">Sur devis</div>
+        <div class="fprice-detail">Adapt&eacute; &agrave; votre programme personnalis&eacute;<br>El&eacute;gible aux financements formation professionnelle</div>
+        <hr class="fprice-sep">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">Commencez par une s&eacute;ance diagnostic gratuite. Nous d&eacute;finissons ensemble le programme id&eacute;al et vous recevez un devis sous 48h.</div>
+        <a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-main" style="width:100%;justify-content:center;">S&eacute;ance diagnostic gratuite</a>
+        <a onclick="showPage('contact')" class="btn-outline" style="width:100%;justify-content:center;margin-top:10px;">Nous &eacute;crire</a>
+      </div>
+      <div class="fspec-card"><div class="fspec-title">Ce programme peut inclure</div><ul class="fspec-list"><li>Techniques oratoires &amp; posture</li><li>Efficacit&eacute; &eacute;motionnelle</li><li>Techniques r&eacute;dactionnelles</li><li>Coaching professionnel</li><li>Mises en situation sur mesure</li><li>Suivi post-formation</li><li>Journal de Bord personnalis&eacute;</li></ul></div>
+    </div></div>
+  </div>
+  <section class="cta-sec"><div class="cta-inner"><div><h2 class="cta-title">Parlons de <em>votre projet</em></h2><p class="cta-sub">Une s&eacute;ance diagnostic de 45 minutes suffit pour co-construire le programme parfait pour vous.</p></div><div class="cta-btns"><a href="https://cal.com/corinne-barois/votre-seance-diagnostic" target="_blank" class="btn-cta-w">S&eacute;ance diagnostic gratuite</a><a onclick="showPage('contact')" class="btn-cta-out">Nous contacter</a></div></div></section>
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Lib&eacute;rez votre potentiel oratoire.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li><li><a onclick="showPage('formation-custom')">Programme sur mesure</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Mentions l&eacute;gales</a><a href="https://impactacom.fr/politique-de-confidentialite/" target="_blank">Confidentialit&eacute;</a></div></div></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  PAGE MENTIONS LÉGALES                               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="page" id="page-mentions">
+  <div style="padding:140px 80px 60px;background:var(--violet);position:relative;overflow:hidden;">
+    <div style="position:absolute;right:-100px;top:-100px;width:400px;height:400px;border-radius:50%;border:80px solid rgba(255,255,255,.04);pointer-events:none;"></div>
+    <button class="fpage-back" onclick="showPage('home')">&#8592; Retour &agrave; l'accueil</button>
+    <h1 style="font-family:var(--r);font-size:clamp(36px,5vw,60px);font-weight:700;line-height:1.08;color:white;margin-bottom:16px;margin-top:24px;">Mentions <em style="font-style:italic;font-weight:400;color:rgba(255,255,255,.55);">l&eacute;gales</em></h1>
+    <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,.55);max-width:560px;line-height:1.7;">Conform&eacute;ment aux dispositions des articles 6-III et 19 de la Loi n&deg; 2004-575 du 21 juin 2004 pour la Confiance dans l'&eacute;conomie num&eacute;rique.</p>
+  </div>
+  <div style="max-width:860px;margin:0 auto;padding:80px 40px;font-family:var(--s);">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;background:var(--lilac);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h2 style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">&Eacute;diteur du site</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Responsable de publication</div><div style="font-size:15px;font-weight:600;color:var(--violet);">Corinne Barois</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">SIRET</div><div style="font-size:15px;font-weight:600;color:var(--violet);">503 968 223 300 10</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Adresse</div><div style="font-size:15px;color:var(--text);">108 rue Michel-Ange, 75016 Paris</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Contact</div><div style="font-size:15px;color:var(--text);"><a href="mailto:contact@impactacom.fr" style="color:var(--violet-soft);text-decoration:none;">contact@impactacom.fr</a></div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;grid-column:1/-1;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">N&deg; de d&eacute;claration d'activit&eacute; (Organisme de formation)</div><div style="font-size:15px;font-weight:600;color:var(--violet);">117 54 47 85 75</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;background:var(--lilac);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h2 style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">H&eacute;bergement</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">H&eacute;bergeur</div><div style="font-size:15px;font-weight:600;color:var(--violet);">OVH SAS</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Capital</div><div style="font-size:15px;color:var(--text);">10 174 560 &euro;</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">RCS</div><div style="font-size:15px;color:var(--text);">Lille M&eacute;tropole 424 761 419 00045</div></div>
+          <div style="background:var(--off-white);border-radius:6px;padding:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Si&egrave;ge social</div><div style="font-size:15px;color:var(--text);">2 rue Kellermann, 59100 Roubaix</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--violet);border-radius:8px;padding:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <div style="width:44px;height:44px;background:rgba(255,255,255,.12);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h2 style="font-family:var(--r);font-size:22px;font-weight:700;color:white;">Certification Qualiopi</h2>
+        </div>
+        <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:20px;">La certification qualit&eacute; <strong style="color:white;">Qualiopi</strong> a &eacute;t&eacute; d&eacute;livr&eacute;e au titre de la cat&eacute;gorie : action de formation. Valid&eacute;e jusqu'en 2028 &mdash; N&deg;&nbsp;117&nbsp;54&nbsp;47&nbsp;85&nbsp;75.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.6;">Accessibilit&eacute; aux personnes handicap&eacute;es : en conformit&eacute; avec la loi du 11 f&eacute;vrier 2005. Adaptations p&eacute;dagogiques possibles sur demande.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <div style="width:44px;height:44px;background:var(--lilac);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
+          <h2 style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">Propri&eacute;t&eacute; intellectuelle</h2>
+        </div>
+        <p style="font-size:15px;color:var(--text);line-height:1.75;margin-bottom:12px;">L'ensemble de ce site rel&egrave;ve des l&eacute;gislations fran&ccedil;aises et internationales sur les droits d'auteur et la propri&eacute;t&eacute; intellectuelle. Tous les droits de reproduction sont r&eacute;serv&eacute;s pour les textes et les photographies de ce site.</p>
+        <p style="font-size:15px;color:var(--text);line-height:1.75;">La reproduction de tout ou partie de ce site sur un support &eacute;lectronique ou autre est formellement interdite, sauf autorisation &eacute;crite de l'auteur, conform&eacute;ment &agrave; l'article L 122-4 du Code de la Propri&eacute;t&eacute; intellectuelle.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <div style="width:44px;height:44px;background:var(--lilac);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B4FA0" stroke-width="1.5" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+          <h2 style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);">Liens hypertextes &amp; droit de r&eacute;ponse</h2>
+        </div>
+        <p style="font-size:15px;color:var(--text);line-height:1.75;margin-bottom:12px;">Les liens hypertextes mis en place dans le cadre du pr&eacute;sent site ont fait l'objet d'une autorisation pr&eacute;alable, expresse et &eacute;crite.</p>
+        <p style="font-size:15px;color:var(--text);line-height:1.75;">Toute personne cit&eacute;e sur le site peut faire valoir un droit de r&eacute;ponse par courrier &agrave; l'adresse de l'&eacute;diteur.</p>
+      </div>
+
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:8px;padding:32px;">
+        <h2 style="font-family:var(--r);font-size:20px;font-weight:700;color:var(--violet);margin-bottom:16px;">Cr&eacute;dits</h2>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:14px;padding-bottom:10px;border-bottom:1px solid var(--border);"><span style="color:var(--muted);">Photographe</span><a href="mailto:contact@impactacom.fr" style="color:var(--violet-soft);text-decoration:none;">contact@impactacom.fr</a></div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:var(--muted);">Webdesign original</span><a href="https://aldigirolamo.fr" target="_blank" style="color:var(--violet-soft);text-decoration:none;">Al Di Girolamo</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer><div class="foot-grid"><div><div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><div class="logo-emblem" style="background:#4A3270;"><svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3.5" fill="white" opacity=".7"/><circle cx="11" cy="11" r="7" stroke="white" stroke-width="1.5" opacity=".35"/></svg></div><div><div class="logo-main" style="color:white;">Impactacom</div><div class="logo-sub">Corinne Barois</div></div></div><p class="foot-tagline">Lib&eacute;rez votre potentiel oratoire avec une m&eacute;thode unique.</p></div><div><div class="foot-h">Programmes</div><ul class="foot-links"><li><a onclick="showPage('formation-training')">Training en ligne</a></li><li><a onclick="showPage('formation-individuel')">Accompagnement individuel</a></li><li><a onclick="showPage('formation-collective')">Formation collective</a></li></ul></div><div class="foot-contact"><div class="foot-h">Contact</div><p>108 rue Michel-Ange &mdash; 75016 Paris</p><p><a href="tel:0613547005">06 13 54 70 05</a></p><p><a href="mailto:contact@impactacom.fr">contact@impactacom.fr</a></p></div></div><div class="foot-bottom"><span class="foot-copy">&copy; 2025 Impactacom &mdash; Corinne Barois. Tous droits r&eacute;serv&eacute;s.</span><div class="foot-legal"><a onclick="showPage('mentions')" style="cursor:pointer;">Men
+</body>
+</html>

@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Env
+.env
+.env.local
+
+# Netlify
+.netlify/
+
+# Node (au cas où tu ajoutes des deps plus tard)
+node_modules/
