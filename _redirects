@@ -1,7 +1,7 @@
-# Redirections 301 : anciennes URLs WP → nouvelles SPA (préserve le SEO + backlinks)
-# Cloudflare Pages applique ces règles avant le fallback SPA en bas du fichier.
+# Redirections 301 - anciennes URLs WP vers nouvelles SPA (preserve le SEO + backlinks)
+# Cloudflare Pages applique ces regles avant le fallback SPA en bas du fichier.
 
-# ─── Pages formations ───
+# Pages formations
 /accompagnement-individuel-3-a-6-mois  /formation-individuel  301
 /accompagnement-individuel-3-a-6-mois/  /formation-individuel  301
 /formation-collective-2-jours  /formation-collective  301
@@ -9,7 +9,7 @@
 /training-en-ligne  /formation-training  301
 /training-en-ligne/  /formation-training  301
 
-# ─── Pages légales ───
+# Pages legales
 /mentions-legales  /mentions  301
 /mentions-legales/  /mentions  301
 /politique-de-confidentialite  /confidentialite  301
@@ -23,25 +23,23 @@
 /lp-term-conditions  /cgv  301
 /lp-term-conditions/  /cgv  301
 
-# ─── Accueil WP ───
+# Accueil WP
 /accueil  /  301
 /accueil/  /  301
 
-# ─── Anciens sitemaps WP → nouveau sitemap ───
+# Anciens sitemaps WP
 /sitemap_index.xml  /sitemap.xml  301
 /sitemaps.xml  /sitemap.xml  301
 /post-sitemap1.xml  /sitemap.xml  301
 /page-sitemap1.xml  /sitemap.xml  301
 
-# ─── Anciens feeds WP → home (rien à servir) ───
+# Anciens feeds WP
 /feed  /  301
 /feed/  /  301
 /comments/feed  /  301
 /comments/feed/  /  301
 
-# ─── Safety : anciens liens SPA transitoires /blog-<slug> → /<slug> ───
-# (Les articles blog sont désormais à la racine, comme sur le WP, pour préserver
-#  le SEO. Ces 301 protègent les liens internes générés entre Pack 1 et le rename.)
+# Safety : anciens liens SPA transitoires /blog-slug vers /slug
 /blog-jai-ecrit-mon-discours-avec-lia  /jai-ecrit-mon-discours-avec-lia  301
 /blog-4-modeles-a-adopter-pour-structurer-son-discours  /4-modeles-a-adopter-pour-structurer-son-discours  301
 /blog-les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle  /les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle  301
@@ -62,5 +60,5 @@
 /blog-sentrainer-avant-un-oral-6-exercices  /sentrainer-avant-un-oral-6-exercices  301
 /blog-le-faux-self-en-prise-de-parole  /le-faux-self-en-prise-de-parole  301
 
-# ─── SPA fallback : toute autre route inconnue sert index.html ───
+# SPA fallback : toute autre route inconnue sert index.html
 /*  /index.html  200
