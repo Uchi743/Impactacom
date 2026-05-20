@@ -98,6 +98,51 @@ window.addEventListener('scroll', function() {
   var nav = document.getElementById('topnav');
   if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(45,31,78,0.08)' : 'none';
 });
+// ====== COOKIE CONSENT (RGPD) ======
+var GA_ID = 'G-E4RYFL7HVR';
+function loadGA() {
+  if (window.__gaLoaded) return;
+  window.__gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('config', GA_ID, { send_page_view: false });
+  // Fire initial page_view since main.js's showPage already ran
+  gtag('event', 'page_view', {
+    page_title: document.title,
+    page_location: location.href,
+    page_path: location.pathname + location.search,
+  });
+}
+function setCookieConsent(status) {
+  try { localStorage.setItem('impactacom_consent', status); localStorage.setItem('impactacom_consent_date', new Date().toISOString()); } catch(e) {}
+  var b = document.getElementById('cookieBanner');
+  if (b) b.hidden = true;
+  if (status === 'accepted') {
+    if (typeof gtag === 'function') {
+      gtag('consent','update',{ ad_storage:'granted', analytics_storage:'granted' });
+    }
+    loadGA();
+  }
+}
+function initCookieBanner() {
+  var stored;
+  try { stored = localStorage.getItem('impactacom_consent'); } catch(e) {}
+  var banner = document.getElementById('cookieBanner');
+  if (stored === 'accepted') {
+    if (typeof gtag === 'function') gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted'});
+    loadGA();
+    return;
+  }
+  if (stored === 'refused') {
+    // gtag stays denied (default), no GA loaded
+    return;
+  }
+  // No prior choice → show banner
+  if (banner) banner.hidden = false;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Determine which page to show based on current URL
   var path = location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
@@ -112,4 +157,5 @@ document.addEventListener('DOMContentLoaded', function() {
     a.href = 'mailto:' + a.dataset.u + '\x40' + a.dataset.d;
   });
   initReveal();
+  initCookieBanner();
 });

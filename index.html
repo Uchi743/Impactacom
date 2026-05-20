@@ -106,21 +106,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260520-violet">
+<link rel="stylesheet" href="css/style.css?v=20260520-cookies">
 
-<!-- Google Analytics 4 (héritée du WP : G-E4RYFL7HVR) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4RYFL7HVR"></script>
+<!-- Google Analytics 4 (consent-gated) — voir js/main.js loadGA() -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-// send_page_view:false → on déclenche manuellement à chaque showPage() dans main.js
-gtag('config', 'G-E4RYFL7HVR', { send_page_view: false });
+// Consent Mode v2 : on dénie tout par défaut, le banner cookies upgrade si accepté
+gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',wait_for_update:500});
 </script>
 </head>
 <body>
-<script src="js/seo-data.js?v=20260520" defer></script>
-<script src="js/main.js?v=20260520" defer></script>
+<script src="js/seo-data.js?v=20260520-cookies" defer></script>
+<script src="js/main.js?v=20260520-cookies" defer></script>
 
 
 <!-- ══════ NAV ══════ -->
@@ -5187,5 +5185,20 @@ Vous avez chargé la politique de cookies sans le support de javascript.&nbsp;Su
     </div>
   </footer>
 </div>
+
+<!-- ══════ COOKIE BANNER (RGPD) ══════ -->
+<div id="cookieBanner" role="dialog" aria-label="Préférences cookies" hidden>
+  <div class="ck-inner">
+    <div class="ck-text">
+      <strong>Cookies & vie privée</strong>
+      <p>Nous utilisons des cookies pour mesurer l'audience du site (Google Analytics) et améliorer votre expérience. Vous pouvez accepter ou refuser à tout moment — votre choix sera mémorisé. <a onclick="showPage('cookies')" style="cursor:pointer;text-decoration:underline;">En savoir plus</a></p>
+    </div>
+    <div class="ck-btns">
+      <button type="button" class="ck-btn ck-refuse" onclick="setCookieConsent('refused')">Tout refuser</button>
+      <button type="button" class="ck-btn ck-accept" onclick="setCookieConsent('accepted')">Tout accepter</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
