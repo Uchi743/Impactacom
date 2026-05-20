@@ -1,1 +1,83 @@
-/* /index.html 200
+# Redirections 301 : anciennes URLs WP → nouvelles SPA (préserve le SEO + backlinks)
+# Cloudflare Pages applique ces règles avant le fallback SPA en bas du fichier.
+
+# ─── Pages formations ───
+/accompagnement-individuel-3-a-6-mois  /formation-individuel  301
+/accompagnement-individuel-3-a-6-mois/  /formation-individuel  301
+/formation-collective-2-jours  /formation-collective  301
+/formation-collective-2-jours/  /formation-collective  301
+/training-en-ligne  /formation-training  301
+/training-en-ligne/  /formation-training  301
+
+# ─── Pages légales ───
+/mentions-legales  /mentions  301
+/mentions-legales/  /mentions  301
+/politique-de-confidentialite  /confidentialite  301
+/politique-de-confidentialite/  /confidentialite  301
+/conditions-generales-de-vente  /cgv  301
+/conditions-generales-de-vente/  /cgv  301
+/politique-de-cookies-ue  /cookies  301
+/politique-de-cookies-ue/  /cookies  301
+/politique-daccessibilite  /accessibilite  301
+/politique-daccessibilite/  /accessibilite  301
+/lp-term-conditions  /cgv  301
+/lp-term-conditions/  /cgv  301
+
+# ─── Accueil WP ───
+/accueil  /  301
+/accueil/  /  301
+
+# ─── Articles blog (19) : ancien slug racine WP → nouveau slug SPA blog-* ───
+/jai-ecrit-mon-discours-avec-lia  /blog-jai-ecrit-mon-discours-avec-lia  301
+/jai-ecrit-mon-discours-avec-lia/  /blog-jai-ecrit-mon-discours-avec-lia  301
+/4-modeles-a-adopter-pour-structurer-son-discours  /blog-4-modeles-a-adopter-pour-structurer-son-discours  301
+/4-modeles-a-adopter-pour-structurer-son-discours/  /blog-4-modeles-a-adopter-pour-structurer-son-discours  301
+/les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle  /blog-les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle  301
+/les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle/  /blog-les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle  301
+/ecrire-un-discours-avec-lia-ou-pas  /blog-ecrire-un-discours-avec-lia-ou-pas  301
+/ecrire-un-discours-avec-lia-ou-pas/  /blog-ecrire-un-discours-avec-lia-ou-pas  301
+/animer-ses-prises-de-parole-en-entreprise-4-exemples  /blog-animer-ses-prises-de-parole-en-entreprise-4-exemples  301
+/animer-ses-prises-de-parole-en-entreprise-4-exemples/  /blog-animer-ses-prises-de-parole-en-entreprise-4-exemples  301
+/comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public  /blog-comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public  301
+/comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public/  /blog-comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public  301
+/lart-de-parler-grace-au-coaching-personnalise  /blog-lart-de-parler-grace-au-coaching-personnalise  301
+/lart-de-parler-grace-au-coaching-personnalise/  /blog-lart-de-parler-grace-au-coaching-personnalise  301
+/mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas  /blog-mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas  301
+/mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas/  /blog-mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas  301
+/les-specificites-en-visioconference  /blog-les-specificites-en-visioconference  301
+/les-specificites-en-visioconference/  /blog-les-specificites-en-visioconference  301
+/la-peur-de-parler-en-entreprise  /blog-la-peur-de-parler-en-entreprise  301
+/la-peur-de-parler-en-entreprise/  /blog-la-peur-de-parler-en-entreprise  301
+/improvisation-pour-back-office-deprime  /blog-improvisation-pour-back-office-deprime  301
+/improvisation-pour-back-office-deprime/  /blog-improvisation-pour-back-office-deprime  301
+/la-distanciation-theatrale-au-service-de-lentreprise  /blog-la-distanciation-theatrale-au-service-de-lentreprise  301
+/la-distanciation-theatrale-au-service-de-lentreprise/  /blog-la-distanciation-theatrale-au-service-de-lentreprise  301
+/leadership-comment-saffirmer-a-loral  /blog-leadership-comment-saffirmer-a-loral  301
+/leadership-comment-saffirmer-a-loral/  /blog-leadership-comment-saffirmer-a-loral  301
+/communication-interpersonnelle-pensez-cible  /blog-communication-interpersonnelle-pensez-cible  301
+/communication-interpersonnelle-pensez-cible/  /blog-communication-interpersonnelle-pensez-cible  301
+/6-techniques-pour-apprendre-son-discours  /blog-6-techniques-pour-apprendre-son-discours  301
+/6-techniques-pour-apprendre-son-discours/  /blog-6-techniques-pour-apprendre-son-discours  301
+/incarner-son-role-grace-aux-pratiques-theatrales  /blog-incarner-son-role-grace-aux-pratiques-theatrales  301
+/incarner-son-role-grace-aux-pratiques-theatrales/  /blog-incarner-son-role-grace-aux-pratiques-theatrales  301
+/vaincre-son-trac-et-impacter-son-public  /blog-vaincre-son-trac-et-impacter-son-public  301
+/vaincre-son-trac-et-impacter-son-public/  /blog-vaincre-son-trac-et-impacter-son-public  301
+/sentrainer-avant-un-oral-6-exercices  /blog-sentrainer-avant-un-oral-6-exercices  301
+/sentrainer-avant-un-oral-6-exercices/  /blog-sentrainer-avant-un-oral-6-exercices  301
+/le-faux-self-en-prise-de-parole  /blog-le-faux-self-en-prise-de-parole  301
+/le-faux-self-en-prise-de-parole/  /blog-le-faux-self-en-prise-de-parole  301
+
+# ─── Anciens sitemaps WP → nouveau sitemap ───
+/sitemap_index.xml  /sitemap.xml  301
+/sitemaps.xml  /sitemap.xml  301
+/post-sitemap1.xml  /sitemap.xml  301
+/page-sitemap1.xml  /sitemap.xml  301
+
+# ─── Anciens feeds WP → home (rien à servir) ───
+/feed  /  301
+/feed/  /  301
+/comments/feed  /  301
+/comments/feed/  /  301
+
+# ─── SPA fallback : toute autre route inconnue sert index.html ───
+/*  /index.html  200
