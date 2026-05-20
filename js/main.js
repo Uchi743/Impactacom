@@ -61,7 +61,7 @@ function showPage(name, pushState) {
       page_path: location.pathname + location.search,
     });
   }
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: 'instant' });
   initReveal();
 }
 
