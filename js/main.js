@@ -53,6 +53,14 @@ function showPage(name, pushState) {
     } catch(e) {}
   }
   updateSEO(name);
+  // GA4 : envoyer un page_view manuel à chaque navigation SPA
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: location.href,
+      page_path: location.pathname + location.search,
+    });
+  }
   window.scrollTo(0, 0);
   initReveal();
 }
