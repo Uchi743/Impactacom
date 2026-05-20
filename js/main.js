@@ -1,3 +1,38 @@
+function updateSEO(name) {
+  var data = (window.__seoData && window.__seoData[name]) || (window.__seoData && window.__seoData.home);
+  if (!data) return;
+  document.title = data.title;
+  function setMeta(selector, attr, value) {
+    var el = document.querySelector(selector);
+    if (el) el.setAttribute(attr, value);
+    else {
+      var parts = selector.match(/meta\[(name|property)="([^"]+)"\]/);
+      if (parts) {
+        var m = document.createElement('meta');
+        m.setAttribute(parts[1], parts[2]);
+        m.setAttribute(attr, value);
+        document.head.appendChild(m);
+      }
+    }
+  }
+  setMeta('meta[name="description"]', 'content', data.description);
+  setMeta('meta[property="og:title"]', 'content', data.title);
+  setMeta('meta[property="og:description"]', 'content', data.description);
+  setMeta('meta[property="og:url"]', 'content', data.canonical);
+  setMeta('meta[property="og:image"]', 'content', location.origin + data.og_image);
+  setMeta('meta[name="twitter:title"]', 'content', data.title);
+  setMeta('meta[name="twitter:description"]', 'content', data.description);
+  setMeta('meta[name="twitter:image"]', 'content', location.origin + data.og_image);
+  var canon = document.querySelector('link[rel="canonical"]');
+  if (canon) canon.setAttribute('href', data.canonical);
+  else {
+    var l = document.createElement('link');
+    l.setAttribute('rel', 'canonical');
+    l.setAttribute('href', data.canonical);
+    document.head.appendChild(l);
+  }
+}
+
 function showPage(name, pushState) {
   document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
   var el = document.getElementById('page-' + name);
@@ -17,6 +52,7 @@ function showPage(name, pushState) {
       history.pushState({ page: name }, '', url);
     } catch(e) {}
   }
+  updateSEO(name);
   window.scrollTo(0, 0);
   initReveal();
 }
@@ -55,7 +91,15 @@ window.addEventListener('scroll', function() {
   if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(45,31,78,0.08)' : 'none';
 });
 document.addEventListener('DOMContentLoaded', function() {
-  try { history.replaceState({ page: 'home' }, '', '/'); } catch(e) {}
+  // Determine which page to show based on current URL
+  var path = location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
+  var initial = path || 'home';
+  if (document.getElementById('page-' + initial)) {
+    showPage(initial, false);
+  } else {
+    try { history.replaceState({ page: 'home' }, '', '/'); } catch(e) {}
+    updateSEO('home');
+  }
   document.querySelectorAll('a[data-u][data-d]').forEach(function(a) {
     a.href = 'mailto:' + a.dataset.u + '\x40' + a.dataset.d;
   });
