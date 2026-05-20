@@ -73,8 +73,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .sec-dark .btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);}
 /* Bouton "Voir tous les témoignages" sur fond sombre */
 .sec-dark .btn-outline.sec-dark-cta{color:var(--white);border-color:rgba(255,255,255,.3);}
-/* Featured card pop sur fond sombre */
-.sec-dark .offer-card.featured{box-shadow:0 12px 48px rgba(124,60,110,.5);border:1px solid rgba(255,255,255,.18);}
+/* Featured card pop sur fond sombre — léger contour clair, pas de glow */
+.sec-dark .offer-card.featured{border:1px solid rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(124,60,110,.35) 0%,var(--violet) 100%);}
 /* La carte "sur mesure" dashed sur fond sombre — adapter contraste */
 .sec-dark .offer-card[style*="dashed"]{background:rgba(255,255,255,.04) !important;border-color:rgba(255,255,255,.18) !important;}
 .sec-dark .offer-card[style*="dashed"] .offer-name{color:rgba(255,255,255,.7) !important;}
