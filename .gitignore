@@ -15,8 +15,9 @@ Thumbs.db
 .env
 .env.local
 
-# Netlify
-.netlify/
+# Cloudflare / Wrangler
+.wrangler/
+.dev.vars
 
 # Node (au cas où tu ajoutes des deps plus tard)
 node_modules/

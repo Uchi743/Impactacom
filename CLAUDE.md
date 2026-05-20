@@ -8,20 +8,21 @@
 Site vitrine **Impactacom** pour **Corinne Barois**, coach en prise de parole en public basée à Paris. Le site présente ses formations (individuelles, collectives, training en ligne, programmes sur mesure), son approche pédagogique, des témoignages et un formulaire de contact.
 
 - **URL de production** : https://impactacom.fr
-- **Hébergement** : Netlify
+- **Hébergement** : Cloudflare Pages (preview : impactacom.pages.dev)
 - **Stack** : HTML statique + CSS + JS vanilla (aucun framework, aucun build)
 
 ## Stack & architecture
 
-**Aucun build, aucune dépendance npm.** Site statique pur, déployé tel quel sur Netlify.
+**Aucun build, aucune dépendance npm.** Site statique pur, déployé tel quel sur Cloudflare Pages.
 
 ```
 impactacom/
 ├── index.html         # Toutes les pages (SPA avec .page)
+├── _redirects         # Fallback SPA Cloudflare (toutes routes → index.html)
+├── _headers           # Headers sécurité (CSP, HSTS, etc.)
 ├── css/style.css      # Tous les styles
 ├── js/main.js         # Router SPA + animations reveal + formulaire
 ├── assets/            # Images, médias (actuellement vide)
-├── netlify.toml       # Config Netlify
 ├── README.md
 └── CLAUDE.md          # Ce fichier
 ```
@@ -93,16 +94,19 @@ Le bouton retour du navigateur fonctionne via `popstate`.
 
 ## Déploiement
 
-Netlify est configuré via `netlify.toml` à la racine :
-- Publish directory : `.` (tout le repo est servi tel quel)
-- Pas de commande de build
-- Redirections configurées pour que toutes les routes (`/programmes`, `/contact`, etc.) servent `index.html` (essentiel pour que la SPA fonctionne au refresh)
+Cloudflare Pages déploie automatiquement la branche `main` :
+- Pas de commande de build (site statique pur)
+- `_redirects` configure le fallback SPA : `/* /index.html 200` pour que toutes les routes (`/programmes`, `/contact`, etc.) servent `index.html` au refresh
+- `_headers` définit les en-têtes de sécurité (CSP, HSTS, X-Frame-Options, etc.)
+- Preview : `impactacom.pages.dev` · Prod : `impactacom.fr`
 
-Pour déployer : push sur la branche connectée à Netlify, ça se déploie automatiquement.
+Pour déployer : `git push origin main`, Cloudflare déploie en ~30s.
+
+Preview locale (avec fallback SPA comme en prod) : `python .serve.py` puis http://localhost:8080
 
 ## À faire / TODO
 
-- [x] Email de contact confirmé : `cobarois@gmail.com`
-- [ ] Confirmer l'email du photographe crédité dans les mentions légales
-- [ ] Décider si le formulaire de contact doit avoir un vrai backend (Netlify Forms = 1 ligne à ajouter, gratuit jusqu'à 100 submissions/mois)
+- [x] Email de contact confirmé : `barois@impactacom.fr`
+- [x] Email photographe confirmé : `contact@studio-michelange.com`
+- [ ] Décider si le formulaire de contact doit avoir un vrai backend (Cloudflare Pages Functions ou Formspree)
 - [ ] Ajouter les assets images dans `/assets/` si besoin (actuellement tout est en SVG inline ou via YouTube)
