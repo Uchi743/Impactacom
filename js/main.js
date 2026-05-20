@@ -91,8 +91,42 @@ function playVideo(containerId, videoId) {
 }
 function submitForm(e) {
   e.preventDefault();
-  document.getElementById('contactForm').style.display = 'none';
-  document.getElementById('contactSuccess').classList.add('show');
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"]');
+  var errEl = document.getElementById('contactError');
+  if (errEl) errEl.style.display = 'none';
+  var originalLabel = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours…'; }
+  // Validation : si l'action n'a pas été configurée, on bascule en mailto comme fallback
+  if (form.action.indexOf('REMPLACER') !== -1) {
+    var fd = new FormData(form);
+    var body = '';
+    fd.forEach(function(v, k) { if (k.charAt(0) !== '_') body += k + ' : ' + v + '\n'; });
+    window.location.href = 'mailto:barois@impactacom.fr?subject=' + encodeURIComponent('Demande via impactacom.fr') + '&body=' + encodeURIComponent(body);
+    if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
+    return;
+  }
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' },
+  }).then(function(r) {
+    if (r.ok) {
+      form.style.display = 'none';
+      var s = document.getElementById('contactSuccess');
+      if (s) s.classList.add('show');
+      if (typeof gtag === 'function') gtag('event', 'contact_submit', { event_category: 'engagement' });
+    } else {
+      return r.json().then(function(d) {
+        var msg = (d && d.errors && d.errors.length) ? d.errors.map(function(e){return e.message;}).join(', ') : "Erreur d'envoi. Réessayez ou contactez Corinne directement à barois@impactacom.fr.";
+        if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
+        if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
+      });
+    }
+  }).catch(function() {
+    if (errEl) { errEl.textContent = "Erreur réseau. Réessayez ou contactez Corinne à barois@impactacom.fr."; errEl.style.display = 'block'; }
+    if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
+  });
 }
 window.addEventListener('scroll', function() {
   var nav = document.getElementById('topnav');

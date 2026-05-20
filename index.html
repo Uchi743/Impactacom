@@ -106,7 +106,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260520-cookies">
+<link rel="stylesheet" href="css/style.css?v=20260520-form">
 
 <!-- Google Analytics 4 (consent-gated) — voir js/main.js loadGA() -->
 <script>
@@ -117,8 +117,8 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',wait_fo
 </script>
 </head>
 <body>
-<script src="js/seo-data.js?v=20260520-cookies" defer></script>
-<script src="js/main.js?v=20260520-cookies" defer></script>
+<script src="js/seo-data.js?v=20260520-form" defer></script>
+<script src="js/main.js?v=20260520-form" defer></script>
 
 
 <!-- ══════ NAV ══════ -->
@@ -1060,17 +1060,17 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',wait_fo
         <div style="font-family:var(--r);font-size:22px;font-weight:700;color:var(--violet);margin-bottom:8px;">Message envoyé !</div>
         <p style="font-size:14px;color:var(--muted);">Corinne vous répondra sous 24h ouvrées. À très bientôt !</p>
       </div>
-      <form id="contactForm" onsubmit="submitForm(event)">
+      <form id="contactForm" action="https://formspree.io/f/REMPLACER-PAR-VOTRE-ID-FORMSPREE" method="POST" onsubmit="submitForm(event)">
         <div class="form-row">
-          <div class="form-group"><label class="form-label">Prénom</label><input type="text" class="form-input" placeholder="Votre prénom" required></div>
-          <div class="form-group"><label class="form-label">Nom</label><input type="text" class="form-input" placeholder="Votre nom" required></div>
+          <div class="form-group"><label class="form-label">Prénom</label><input type="text" name="prenom" class="form-input" placeholder="Votre prénom" required></div>
+          <div class="form-group"><label class="form-label">Nom</label><input type="text" name="nom" class="form-input" placeholder="Votre nom" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="votre@email.com" required></div>
-          <div class="form-group"><label class="form-label">Téléphone</label><input type="tel" class="form-input" placeholder="06 XX XX XX XX"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-input" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label class="form-label">Téléphone</label><input type="tel" name="telephone" class="form-input" placeholder="06 XX XX XX XX"></div>
         </div>
         <div class="form-group"><label class="form-label">Programme souhaité</label>
-          <select class="form-select">
+          <select name="programme" class="form-select">
             <option value="">Choisir un programme…</option>
             <option>Training en ligne (3 mois)</option>
             <option>Accompagnement individuel (3–6 mois)</option>
@@ -1079,7 +1079,11 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',wait_fo
             <option>Autre / Je ne sais pas encore</option>
           </select>
         </div>
-        <div class="form-group"><label class="form-label">Votre message</label><textarea class="form-textarea" placeholder="Décrivez votre situation, vos objectifs, vos questions…" required></textarea></div>
+        <div class="form-group"><label class="form-label">Votre message</label><textarea name="message" class="form-textarea" placeholder="Décrivez votre situation, vos objectifs, vos questions…" required></textarea></div>
+        <!-- Honeypot anti-spam (invisible aux humains, piège pour les bots) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="Nouveau message depuis impactacom.fr">
+        <div id="contactError" style="display:none;color:#c0392b;font-size:14px;margin-bottom:14px;padding:12px;background:#fee;border-radius:4px;"></div>
         <button type="submit" class="form-submit">Envoyer mon message</button>
       </form>
     </div>
