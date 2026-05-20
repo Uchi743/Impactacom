@@ -514,6 +514,10 @@ footer{background:#1A1228;padding:60px 80px 36px;}
   #page-mentions > div:nth-child(2){padding:52px 20px 72px;}
   #page-mentions > div:nth-child(2) > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
 
+  /* Qualiopi (mentions + footer accueil) */
+  .qualiopi-grid{grid-template-columns:1fr !important;gap:24px !important;}
+  .qualiopi-foot-grid{grid-template-columns:1fr !important;gap:14px !important;}
+
   /* Blog */
   .blog-list{grid-template-columns:1fr;gap:20px;padding:48px 20px 64px;}
   .barticle{padding:48px 20px 60px;}
