@@ -478,6 +478,17 @@ footer{background:#1A1228;padding:60px 80px 36px;}
   .foot-grid{gap:40px;}
   footer{padding:60px 40px 32px;}
   .blog-list{padding:56px 40px 72px;}
+
+  /* Hero stats : tassage des separateurs */
+  .hero-stats{flex-wrap:wrap;gap:8px 24px;}
+  .hstat{padding-right:24px;margin-right:24px;}
+  .hstat-n{font-size:32px;}
+}
+
+/* RESPONSIVE : footer intermediaire 2 cols (logo span full width) */
+@media(max-width:880px) and (min-width:769px){
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px 48px;}
+  .foot-grid > div:first-child{grid-column:1 / -1;margin-bottom:4px;}
 }
 
 /* RESPONSIVE MOBILE */
