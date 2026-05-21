@@ -467,6 +467,17 @@ footer{background:#1A1228;padding:60px 80px 36px;}
   .testi-grid,.testi-big-grid{grid-template-columns:1fr 1fr;}
   .videos-grid{grid-template-columns:1fr 1fr;}
   .fpage-body{grid-template-columns:1fr 300px;padding:60px 40px;gap:40px;}
+
+  /* Paliers tablette ajoutes : padding + gaps */
+  .sec{padding:80px 40px;}
+  .apropos-parcours,.apropos-vals,.apropos-certifs{padding:64px 40px;}
+  .parcours-grid{gap:48px;margin-top:36px;}
+  .prog-item{padding:36px;gap:40px;}
+  .cta-inner{padding:56px 48px;gap:40px;}
+  .cta-sec{padding:80px 40px;}
+  .foot-grid{gap:40px;}
+  footer{padding:60px 40px 32px;}
+  .blog-list{padding:56px 40px 72px;}
 }
 
 /* RESPONSIVE MOBILE */
@@ -566,6 +577,8 @@ footer{background:#1A1228;padding:60px 80px 36px;}
   .apropos-vals,.apropos-parcours,.apropos-certifs{padding:60px 20px;}
   .vals-grid{grid-template-columns:1fr;gap:2px;}
   .parcours-grid{grid-template-columns:1fr;gap:0;}
+  .parcours-grid > .parcours-timeline:not(:last-child) .ptl-item:last-child{padding-bottom:32px;}
+  .parcours-grid > .parcours-timeline:not(:last-child) .ptl-item:last-child::before{display:block;}
   .certifs-grid{grid-template-columns:1fr;}
 
   /* Contact */
