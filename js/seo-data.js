@@ -94,114 +94,114 @@ window.__seoData = {
     "title": "J'ai écrit mon discours avec l'IA — Blog Impactacom",
     "description": "Aujourd'hui, je vous propose de découvrir Prompt Claude pour vous faire gagner du temps dans la rédaction de vos allocutions. Je lui donne une assez bon...",
     "canonical": "https://impactacom.fr/jai-ecrit-mon-discours-avec-lia",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/jai-ecrit-mon-discours-avec-lia.png"
   },
   "4-modeles-a-adopter-pour-structurer-son-discours": {
-    "title": "Découvrez les avantages et les impacts pour chaque structure — Bl",
+    "title": "Découvrez les avantages et les impacts pour chaque structure — Blog Impactacom",
     "description": "Comment choisir son plan en fonction du contexte et de vos besoins. Voici quatre exemples pour y voir clair.",
     "canonical": "https://impactacom.fr/4-modeles-a-adopter-pour-structurer-son-discours",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/4-modeles-a-adopter-pour-structurer-son-discours.jpg"
   },
   "les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle": {
-    "title": "Incarner une communication interpersonnelle de qualité — Blog Imp",
+    "title": "Incarner une communication interpersonnelle de qualité — Blog Impactacom",
     "description": "Des conseils pour réussir votre encontre professionnelle selon le verbal, le paraverbal et le non verbal.",
     "canonical": "https://impactacom.fr/les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/les-3-vecteurs-pour-ameliorer-sa-communication-interpersonnelle.jpg"
   },
   "ecrire-un-discours-avec-lia-ou-pas": {
-    "title": "Vous avez envie d'utiliser l'IA pour rédiger vos discours ? — Blo",
+    "title": "Vous avez envie d'utiliser l'IA pour rédiger vos discours ? — Blog Impactacom",
     "description": "Voici mes conseils et mes retours sur des outils testés.",
     "canonical": "https://impactacom.fr/ecrire-un-discours-avec-lia-ou-pas",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/ecrire-un-discours-avec-lia-ou-pas.jpg"
   },
   "animer-ses-prises-de-parole-en-entreprise-4-exemples": {
     "title": "Réussir ses prises de parole en entreprise. — Blog Impactacom",
     "description": "Détenez les bonnes pratiques pour faire une présentation de qualité en réunion pour gérer la relation et les collaborateurs.",
     "canonical": "https://impactacom.fr/animer-ses-prises-de-parole-en-entreprise-4-exemples",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/animer-ses-prises-de-parole-en-entreprise-4-exemples.jpg"
   },
   "comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public": {
-    "title": "Gérer les biais cognitifs en prise de parole en public. — Blog Im",
+    "title": "Gérer les biais cognitifs en prise de parole en public. — Blog Impactacom",
     "description": "Connaître ses biais cognitifs pour éviter d'être piégé par ses propres perceptions souvent biaisées.",
     "canonical": "https://impactacom.fr/comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/comment-surmonter-les-biais-cognitifs-en-prise-de-parole-en-public.jpg"
   },
   "lart-de-parler-grace-au-coaching-personnalise": {
-    "title": "Gagnez en aisance et persuasion grâce au coaching — Blog Impactac",
+    "title": "Gagnez en aisance et persuasion grâce au coaching — Blog Impactacom",
     "description": "Connaître ses failles et travailler ses forces avec une coach experte en communication.",
     "canonical": "https://impactacom.fr/lart-de-parler-grace-au-coaching-personnalise",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/lart-de-parler-grace-au-coaching-personnalise.jpg"
   },
   "mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas": {
     "title": "Réussir vos messages devant une large audience. — Blog Impactacom",
     "description": "Préparez-vous à captiver votre audience avec des conseils pour soigner votre mise en scène et éviter les pièges courants.",
     "canonical": "https://impactacom.fr/mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/mes-conseils-pour-briller-sur-scene-sans-faire-de-faux-pas.jpg"
   },
   "les-specificites-en-visioconference": {
-    "title": "Mes astuces pratiques pour surmonter les impacts négatifs. — Blog",
+    "title": "Mes astuces pratiques pour surmonter les impacts négatifs. — Blog Impactacom",
     "description": "Apprenez à éviter les pièges courants, à maximiser l'impact de votre communication et à transmettre votre message avec confiance et assurance.",
     "canonical": "https://impactacom.fr/les-specificites-en-visioconference",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/les-specificites-en-visioconference.jpeg"
   },
   "la-peur-de-parler-en-entreprise": {
-    "title": "Éviter les moments de gêne et prendre confiance en soi. — Blog Im",
+    "title": "Éviter les moments de gêne et prendre confiance en soi. — Blog Impactacom",
     "description": "Évitez les pièges du trac et des réactions involontaires qui peuvent perturber vos interventions. Apprenez à gérer votre stress et à rester authentique.",
     "canonical": "https://impactacom.fr/la-peur-de-parler-en-entreprise",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/la-peur-de-parler-en-entreprise.jpg"
   },
   "improvisation-pour-back-office-deprime": {
-    "title": "L'Improvisation théâtrale au service de vos équipes. — Blog Impac",
+    "title": "L'Improvisation théâtrale au service de vos équipes. — Blog Impactacom",
     "description": "Découvrez comment l'improvisation peut transformer l'ambiance en interne et aborder les émotions. Des exercices pour prendre du recul en équipe.",
     "canonical": "https://impactacom.fr/improvisation-pour-back-office-deprime",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/improvisation-pour-back-office-deprime.jpg"
   },
   "la-distanciation-theatrale-au-service-de-lentreprise": {
-    "title": "Boostez les compétences oratoires interpersonnelles. — Blog Impac",
+    "title": "Boostez les compétences oratoires interpersonnelles. — Blog Impactacom",
     "description": "Développez vos compétences personnelles et professionnelles grâce à la pratique théâtrale et ses bienfaits immédiats.",
     "canonical": "https://impactacom.fr/la-distanciation-theatrale-au-service-de-lentreprise",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/la-distanciation-theatrale-au-service-de-lentreprise.jpg"
   },
   "leadership-comment-saffirmer-a-loral": {
-    "title": "Affirmez votre autorité grâce à la distanciation théâtrale. — Blo",
+    "title": "Affirmez votre autorité grâce à la distanciation théâtrale. — Blog Impactacom",
     "description": "Explorez les bénéfices de cette approche pour développer votre présence, votre assertivité et votre capacité à prendre la parole avec confiance.",
     "canonical": "https://impactacom.fr/leadership-comment-saffirmer-a-loral",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/leadership-comment-saffirmer-a-loral.jpeg"
   },
   "communication-interpersonnelle-pensez-cible": {
-    "title": "Développez vos compétences relationnelles et émotionnelles. — Blo",
+    "title": "Développez vos compétences relationnelles et émotionnelles. — Blog Impactacom",
     "description": "Renforcez vos compétences en communication interpersonnelle et explorez les bénéfices de cette approche pour améliorer vos relations.",
     "canonical": "https://impactacom.fr/communication-interpersonnelle-pensez-cible",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/communication-interpersonnelle-pensez-cible.jpg"
   },
   "6-techniques-pour-apprendre-son-discours": {
     "title": "Des techniques pour mémoriser votre texte. — Blog Impactacom",
     "description": "Mémorisez votre discours et captivez votre audience lors de vos prises de parole en public. Apprenez à structurer votre discours et entraînez-vous.",
     "canonical": "https://impactacom.fr/6-techniques-pour-apprendre-son-discours",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/6-techniques-pour-apprendre-son-discours.jpg"
   },
   "incarner-son-role-grace-aux-pratiques-theatrales": {
-    "title": "Découvrez l'impact du théâtre et renforcez vos compétences. — Blo",
+    "title": "Découvrez l'impact du théâtre et renforcez vos compétences. — Blog Impactacom",
     "description": "Explorez l'impact positif du théâtre sur des situations professionnelles complexes en apprenant à incarner efficacement votre rôle.",
     "canonical": "https://impactacom.fr/incarner-son-role-grace-aux-pratiques-theatrales",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/incarner-son-role-grace-aux-pratiques-theatrales.jpg"
   },
   "vaincre-son-trac-et-impacter-son-public": {
-    "title": "Conseils pour prendre la parole devant une grande audience. — Blo",
+    "title": "Conseils pour prendre la parole devant une grande audience. — Blog Impactacom",
     "description": "Découvrez mes conseils pratiques pour surmonter le trac et rendre votre prise de parole en public impactante.",
     "canonical": "https://impactacom.fr/vaincre-son-trac-et-impacter-son-public",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/vaincre-son-trac-et-impacter-son-public.jpg"
   },
   "sentrainer-avant-un-oral-6-exercices": {
-    "title": "Préparation physique pour une prise de parole réussie. — Blog Imp",
+    "title": "Préparation physique pour une prise de parole réussie. — Blog Impactacom",
     "description": "Voici un protocole simple et efficace pour vous entraîner physiquement avant de prendre la parole en public. Adoptez ces exercices pratiques !",
     "canonical": "https://impactacom.fr/sentrainer-avant-un-oral-6-exercices",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/sentrainer-avant-un-oral-6-exercices.jpg"
   },
   "le-faux-self-en-prise-de-parole": {
-    "title": "Éviter de tomber dans le piège du faux-self à l'oral ? — Blog Imp",
+    "title": "Éviter de tomber dans le piège du faux-self à l'oral ? — Blog Impactacom",
     "description": "Apprenez à vous reconnaître dans l'action grâce à un entraînement sur mesure pour une communication authentique.",
     "canonical": "https://impactacom.fr/le-faux-self-en-prise-de-parole",
-    "og_image": "/assets/img/og-default.jpg"
+    "og_image": "/assets/img/blog/le-faux-self-en-prise-de-parole.jpg"
   }
 };
