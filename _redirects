@@ -32,6 +32,7 @@
 /sitemaps.xml  /sitemap.xml  301
 /post-sitemap1.xml  /sitemap.xml  301
 /page-sitemap1.xml  /sitemap.xml  301
+/category-sitemap1.xml  /sitemap.xml  301
 
 # Anciens feeds WP
 /feed  /  301

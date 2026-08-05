@@ -58,9 +58,10 @@ export async function onRequest(context) {
   const { request, next } = context;
   const res = await next();
 
-  // On ne touche que les documents HTML (pas les assets, images, JS…).
+  // On ne touche que les documents HTML servis normalement — jamais les assets,
+  // ni les redirections de _redirects (301) qui doivent passer telles quelles.
   const contentType = res.headers.get("content-type") || "";
-  if (!contentType.includes("text/html")) return res;
+  if (!contentType.includes("text/html") || res.status !== 200) return res;
 
   const url = new URL(request.url);
   const slug = decodeURIComponent(url.pathname.replace(/^\/+|\/+$/g, "")) || "home";
@@ -73,8 +74,27 @@ export async function onRequest(context) {
     return res; // en cas de souci, on sert le HTML tel quel (jamais d'erreur 500).
   }
 
-  // Route inconnue (ex. 404 SPA) → on laisse les balises par défaut de l'accueil.
-  if (!data) return res;
+  // Route inconnue → vrai 404.
+  //
+  // Le fallback SPA de _redirects (`/* /index.html 200`) sert index.html en HTTP 200
+  // pour N'IMPORTE QUELLE URL : /wp-admin, /?p=12345, un vieux lien WordPress, une
+  // typo… Chacune devient donc une page indexable de ~490 Ko au contenu identique.
+  // C'est ce qui alimente les "pages en double" et les "explorées, non indexées"
+  // dans la Search Console. On renvoie un statut 404 + noindex : le corps reste
+  // servi (le routeur client bascule sur l'accueil), mais Google ne l'indexe plus.
+  //
+  // Sûr par construction : seo-data.js couvre les 34 routes réelles du site
+  // (34 entrées = 34 blocs .page = 34 URLs du sitemap, vérifié). Toute route
+  // légitime ajoutée à seo-data.js continue de répondre 200.
+  if (!data) {
+    const body = (await res.text()).replace(
+      /<\/head>/i,
+      '<meta name="robots" content="noindex,follow">\n</head>'
+    );
+    const h404 = new Headers(res.headers);
+    h404.delete("content-length");
+    return new Response(body, { status: 404, statusText: "Not Found", headers: h404 });
+  }
 
   let html = await res.text();
 
