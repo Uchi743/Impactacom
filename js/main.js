@@ -54,7 +54,8 @@ function showPage(name, pushState) {
   }
   updateSEO(name);
   // GA4 : envoyer un page_view manuel à chaque navigation SPA
-  if (typeof gtag === 'function') {
+  // (uniquement si GA est chargé : au 1er affichage loadGA() envoie lui-même le page_view)
+  if (window.__gaLoaded && typeof gtag === 'function') {
     gtag('event', 'page_view', {
       page_title: document.title,
       page_location: location.href,
