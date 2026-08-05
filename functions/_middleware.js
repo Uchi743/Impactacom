@@ -56,6 +56,18 @@ function setMeta(html, kind, key, value) {
 
 export async function onRequest(context) {
   const { request, next } = context;
+
+  // Hote canonique : www.impactacom.fr -> impactacom.fr, en 301.
+  // Un seul hostname indexable, et les vieux liens en www cessent de tomber en
+  // erreur. Doit passer avant next() : aucune raison de rendre la page pour la
+  // jeter ensuite.
+  const reqUrl = new URL(request.url);
+  if (reqUrl.hostname.startsWith("www.")) {
+    reqUrl.hostname = reqUrl.hostname.slice(4);
+    reqUrl.protocol = "https:";
+    return Response.redirect(reqUrl.toString(), 301);
+  }
+
   const res = await next();
 
   // On ne touche que les documents HTML servis normalement — jamais les assets,
@@ -63,7 +75,7 @@ export async function onRequest(context) {
   const contentType = res.headers.get("content-type") || "";
   if (!contentType.includes("text/html") || res.status !== 200) return res;
 
-  const url = new URL(request.url);
+  const url = reqUrl;
   const slug = decodeURIComponent(url.pathname.replace(/^\/+|\/+$/g, "")) || "home";
 
   let data;
