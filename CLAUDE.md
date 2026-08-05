@@ -92,6 +92,31 @@ Le bouton retour du navigateur fonctionne via `popstate`.
 6. **Fonts** : déjà chargées via Google Fonts avec `preconnect`. Pas besoin d'en ajouter.
 7. **Préserver l'historique SPA** : toujours utiliser `showPage()` + `history.pushState` pour les navigations internes, jamais de lien `<a href="/xxx">` direct.
 
+## Google Analytics 4 — NE PAS CASSER
+
+Propriété GA4 `impactacom.fr` · ID de mesure **`G-E4RYFL7HVR`** · ID de flux `5783088316`.
+Compte propriétaire : `barois@baroisetassocies.com`.
+
+Chargement **conditionné au consentement** (Consent Mode v2) : snippet inline dans `index.html`
+(`gtag('consent','default', … denied)`), puis `loadGA()` dans `js/main.js` injecte `gtag.js`
+uniquement si le visiteur a accepté le bandeau cookies (`localStorage.impactacom_consent`).
+
+Trois pièges déjà rencontrés — deux ont causé **zéro donnée collectée pendant des mois** :
+
+1. **`gtag('js', new Date())` est obligatoire** dans `loadGA()`, avant `gtag('config', …)`.
+   Sans lui, `gtag.js` se charge et bootstrappe le conteneur mais **n'envoie aucun hit**
+   et ne pose aucun cookie `_ga` — sans la moindre erreur en console.
+2. **CSP `connect-src` doit autoriser `https://*.google-analytics.com`** (dans `_headers`).
+   GA4 envoie le trafic européen sur `region1.google-analytics.com` : n'autoriser que
+   l'hôte exact `www.google-analytics.com` bloque silencieusement toute la collecte.
+3. Les `page_view` SPA sont envoyés manuellement depuis `showPage()` (`config` utilise
+   `send_page_view: false`). Ils sont gardés par `window.__gaLoaded` : sans ce garde, le
+   `page_view` du premier affichage part avant `config` et GA le jette.
+
+Vérifier une modif GA en prod (console du navigateur, après un hard reload) :
+`performance.getEntriesByType('resource').filter(e=>/g\/collect/.test(e.name)).length` > 0
+et `/(^|;\s*)_ga=/.test(document.cookie) === true`.
+
 ## Déploiement
 
 Cloudflare Pages déploie automatiquement la branche `main` :

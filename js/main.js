@@ -116,7 +116,7 @@ function submitForm(e) {
       form.style.display = 'none';
       var s = document.getElementById('contactSuccess');
       if (s) s.classList.add('show');
-      if (typeof gtag === 'function') gtag('event', 'contact_submit', { event_category: 'engagement' });
+      if (window.__gaLoaded && typeof gtag === 'function') gtag('event', 'contact_submit', { event_category: 'engagement' });
     } else {
       return r.json().then(function(d) {
         var msg = (d && d.errors && d.errors.length) ? d.errors.map(function(e){return e.message;}).join(', ') : "Erreur d'envoi. Réessayez ou contactez Corinne directement à barois@impactacom.fr.";
