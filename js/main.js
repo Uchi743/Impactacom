@@ -142,6 +142,8 @@ function loadGA() {
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
   document.head.appendChild(s);
+  // Indispensable : sans la commande 'js', gtag.js s'initialise mais n'envoie aucun hit
+  gtag('js', new Date());
   gtag('config', GA_ID, { send_page_view: false });
   // Fire initial page_view since main.js's showPage already ran
   gtag('event', 'page_view', {
